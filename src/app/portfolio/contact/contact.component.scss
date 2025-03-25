@@ -1,0 +1,155 @@
+section {
+    height: 100vh;
+    width: 100vw;
+    padding-left: 11rem;
+    display: flex;
+    align-items: center;
+}
+
+.title-fomular-container {
+    display: flex;
+    height: 72%;
+}
+
+.title-container {
+    >h2 {
+        font-size: 3.5rem;
+        width: max-content;
+        color: transparent;
+        -webkit-text-stroke: 2px #a5ff00;
+        writing-mode: sideways-lr;
+        margin-right: 25px;
+    }
+}
+
+.formular-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    max-width: 456px;
+}
+
+input {
+    height: 60px;
+    border: 1px solid #B5E93B;
+    background-color: transparent;
+    color: #D3ED97;
+    border-radius: 30px;
+    padding-left: 24px;
+}
+
+input.message {
+    height: 255px;
+}
+
+.check-privacy-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 1rem;
+
+
+    >input {
+        height: 18px;
+        width: 18px;
+        color: #FFFDFD;
+        margin: 0 8px 0 0;
+    }
+
+    >div {
+        font-size: 14px;
+        font-family: 'Quantico';
+        font-weight: 400;
+        color: #B5E93B;
+    }
+}
+
+.send-btn-container {
+    text-align: end;
+}
+
+.send-btn {
+    background-color: #9E9D9D;
+    width: 106px;
+    height: 43px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 400;
+    font-family: 'Quantico';
+    color: #4A4A4A;
+}
+
+.info-container {
+    width: 417px;
+    height: 665px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.ct-d3ed97 {
+    color: #D3ED97;
+}
+
+.ct-fffdfd {
+    color: #FFFDFD;
+}
+
+.ta-end {
+    text-align: end;
+}
+
+.dflex-acenter-jcend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    >img {
+        margin-right: 8px;
+    }
+
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.legal-policy-copy-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFFDFD;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.fz-18 {
+    font-size: 18px;
+}
+
+.my-work-arrow_2 {
+    margin: 6rem 0;
+}
+
+
+a:hover {
+    color: #D3ED97;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #B5E93B;
+}
+
+.pp-text:active {
+    text-decoration: underline;
+    color: #FFFDFD;
+}

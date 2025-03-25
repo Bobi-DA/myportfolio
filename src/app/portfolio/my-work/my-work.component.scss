@@ -1,6 +1,6 @@
 section {
     height: 100vh;
-    width: 300vw;
+    width: auto;
     display: flex;
     align-items: center;
     padding-left: 12rem;
@@ -8,7 +8,7 @@ section {
 
 .my-work-title {
     >h2 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         width: max-content;
         color: transparent;
         -webkit-text-stroke: 2px #a5ff00;
@@ -87,16 +87,6 @@ button {
 .btn-container {
     display: flex;
     justify-content: space-evenly;
-
-    >.btn-github {
-        background-color: transparent;
-        color: #B5E93B;
-    }
-
-    >.btn-live-test {
-        background-color: #B5E93B;
-        color: #252525;
-    }
 }
 
 .screenshot-join {
@@ -119,6 +109,132 @@ p {
     filter: none;
 }
 
-// .screenshot-join:active {
-//     filter: grayscale(80%);
-// }
+.my-work-arrow {
+    height: 72%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 6rem;
+}
+
+.my-work-arrow_2{
+    height: 72%;
+    display: flex;
+    margin: 0 6rem;
+    align-items: center;
+}
+
+.btn-github {
+    background-color: transparent;
+    color: #B5E93B;
+}
+
+.btn-github:hover {
+    border: 1px solid #D3ED97;
+    background-color: #B5E93B33;
+    color: #FFFDFD;
+}
+
+.btn-live-test {
+    background-color: #B5E93B;
+    color: #252525;
+}
+
+.btn-live-test:hover {
+    background: linear-gradient(0.49turn, #B5E93B 64%, #547800);
+    color: #252525;
+}
+
+.ongoing-txt {
+    color: #FFFDFD;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.ongoing-txt-btn-container {
+    width: 345px;
+
+    >div {
+
+        display: flex;
+        align-items: center;
+
+        >h3 {
+            font-size: 3rem;
+            // width: max-content;
+            color: transparent;
+            -webkit-text-stroke: 1px #a5ff00;
+            // writing-mode: sideways-lr;
+            margin: 0;
+        }
+
+        >h4 {
+            margin-bottom: 0;
+            font-family: 'Quantico';
+            font-size: 30px;
+            font-weight: 400;
+            color: #B5E93B;
+        }
+    }
+
+    >p {
+        margin: 0;
+    }
+
+    >.btn-letstalk-container {
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+}
+
+.title-references-container {
+    display: flex;
+}
+
+.references-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.ref-container {
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    width: 478px;
+    height: 11.5rem;
+    border-radius: 30px;
+    border: 1px solid #D3ED97;
+    text-align: center;
+
+    >.ref-txt {
+        color: #FFFDFD;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    >.middle-line {
+        border: 1px solid #D3ED97;
+        height: 113px;
+        width: 0;
+        margin: 19px;
+    }
+
+    >.collegue-container {
+        display: flex;
+        flex-direction: column;
+
+        >.name-collegue {
+            color: #B5E93B;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 0;
+            white-space: nowrap
+        }
+
+        >.name-project {
+            color: #D3ED97;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
