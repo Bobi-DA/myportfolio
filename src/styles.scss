@@ -1,10 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+.arrow {
+    width: fit-content;
+    align-content: center;
+    margin-bottom: 16%;
+    margin-right: 32px;
+}
+
+img:hover {
+    filter: drop-shadow(0 0 0.75rem #B5E93B);
+}
 
 
 body {
     margin: 0;
-    display: flex;
-    // align-items: center;
-    // height: 100vh;
-    overflow: hidden;
+    overflow-y: hidden;
+    //     display: flex;
+    //     // align-items: center;
+    //     height: 100vh;
+    //     overflow: hidden;
+    font-family: 'Quantico';
+}
+
+
+
+/* quantico-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quantico';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/quantico-v17-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quantico';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./assets/fonts/quantico-v17-latin-italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quantico';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/quantico-v17-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* quantico-700italic - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quantico';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./assets/fonts/quantico-v17-latin-700italic.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.fontQuantigo {
+    font-family: 'Quantico';
 }

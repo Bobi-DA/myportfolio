@@ -1,15 +1,75 @@
-// .lp-section{
-//     height: 100%;
-//     width: 100vw;
-//     background-color: red;
-//     border-bottom: 5px solid #4CAF50;
-// }
+.mr-16 {
+    margin-right: 16px;
+}
 
-// .lp-section{
-//     width: 100vw;  // Jede Section ist so breit wie der Bildschirm
-//     height: 100vh; // Jede Section ist so hoch wie der Bildschirm
-//     flex-shrink: 0; // Verhindert, dass die Sektionen zusammengequetscht werden
-//     scroll-snap-align: start; // Optional: Snap-Scrolling
-//     border-right: 5px solid #4CAF50;
+.ml-40 {
+    margin-left: 40px;
+}
 
+.lp-section {
+    height: 100vh;
+    width: 100vw;
+    // background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.social-lang-container {
+    display: flex;
+    height: min-content;
+    justify-content: flex-end;
+    align-items: center;
+    // margin-right: 16%;
+    margin-top: 32px;
+    position: fixed;
+    right: 16%;
+}
+
+.img-name-arrow-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 24%;
+    padding-left: 10.5rem;
+}
+
+.img-name-container {
+    position: relative;
+    // text-align: center;
+    // color: white;
+
+    >.name-dev-container {
+        text-align: end;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #B5E93B;
+        width: 100%;
+    }
+
+    >img {
+        height: 100%;
+        position: relative;
+        // bottom: -32px;
+    }
+}
+
+
+.name-subname-txt {
+    font-size: 5.4rem;
+    margin-bottom: 0;
+
+}
+
+.dev-txt {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px #a5ff00;
+}
+
+// img:hover {
+//     z-index: 1;
+//     background-image: url("../../../assets/img/github_icon_green.svg");
 // }

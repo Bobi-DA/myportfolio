@@ -1,0 +1,42 @@
+section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 4.5rem;
+    width: max-content;
+    color: transparent;
+    -webkit-text-stroke: 2px #a5ff00;
+    writing-mode: sideways-lr;
+}
+
+.skill-container {
+    display: flex;
+    width: 50%;
+    margin-top: 16%;
+}
+
+.txt-white {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.skill-icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    img{
+        margin: 1rem;
+    }
+}
+
+.skill-arrow{
+    position: relative;
+    right: -13rem;
+}
+

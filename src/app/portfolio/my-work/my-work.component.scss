@@ -1,0 +1,124 @@
+section {
+    height: 100vh;
+    width: 300vw;
+    display: flex;
+    align-items: center;
+    padding-left: 12rem;
+}
+
+.my-work-title {
+    >h2 {
+        font-size: 4.5rem;
+        width: max-content;
+        color: transparent;
+        -webkit-text-stroke: 2px #a5ff00;
+        writing-mode: sideways-lr;
+        margin-right: 25px;
+    }
+}
+
+.my-work-container {
+    display: flex;
+}
+
+.my-work-bg {
+    width: 57rem;
+    background-color: #424C29;
+    height: 35rem;
+    border-radius: 30px;
+    background: linear-gradient(0.25turn, #333D1A, #414C29);
+    padding: 0 2em;
+    margin-right: 40px;
+}
+
+.title-project {
+    display: flex;
+    align-items: center;
+}
+
+.title-project h1 {
+    margin: 0 1rem;
+    font-size: 6.5rem;
+    width: max-content;
+    color: transparent;
+    -webkit-text-stroke: 1px #a5ff00;
+}
+
+.about-tech-img-container {
+    display: flex;
+}
+
+.over-project-txt {
+    margin-top: 0;
+}
+
+.ul-my-work {
+    color: #FFFDFD;
+    margin-top: 0;
+    list-style-type: circle;
+    margin: 0 54px 0 28px;
+}
+
+.h2-my-work {
+    color: #B5E93B;
+    font-family: 'Quantico';
+    font-size: 3em;
+    font-weight: 400;
+}
+
+h4 {
+    margin-top: 0;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+}
+
+button {
+    width: 106px;
+    height: 43px;
+    border-radius: 30px;
+    border: 1px solid #B5E93B;
+    font-weight: 400;
+    font-family: 'Quantico';
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    >.btn-github {
+        background-color: transparent;
+        color: #B5E93B;
+    }
+
+    >.btn-live-test {
+        background-color: #B5E93B;
+        color: #252525;
+    }
+}
+
+.screenshot-join {
+    margin: 0 16px 20px 0;
+    filter: grayscale(90%);
+}
+
+li::marker {
+    content: url("../../../assets/img/ellipse.svg");
+    font-size: 1.2em;
+}
+
+p {
+    font-size: 1rem;
+    margin-left: 1.4rem;
+}
+
+
+.screenshot-join:hover {
+    filter: none;
+}
+
+// .screenshot-join:active {
+//     filter: grayscale(80%);
+// }
