@@ -3,21 +3,24 @@ section {
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    position: relative;
 }
 
 h2 {
     font-size: 3.5rem;
-    width: max-content;
+    // width: max-content;
     color: transparent;
     -webkit-text-stroke: 2px #a5ff00;
     writing-mode: sideways-lr;
+    margin: 0 24px;
 }
 
 .skill-container {
     display: flex;
-    width: 50%;
-    margin-top: 16%;
+    width: 72%;
+    height: 64%;
+    align-items: flex-start;
 }
 
 .txt-white {
@@ -30,13 +33,17 @@ h2 {
     flex-wrap: wrap;
     align-items: flex-start;
 
-    img{
+    >img {
         margin: 1rem;
+    }
+
+    >img:hover{
+        cursor: pointer;
     }
 }
 
-.skill-arrow{
-    position: relative;
-    right: -13rem;
+.skill-arrow {
+    position: absolute;
+    right: 64px;
+    height: 72%;
 }
-

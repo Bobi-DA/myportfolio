@@ -1,14 +1,22 @@
 section {
     height: 100vh;
     width: 100vw;
-    padding-left: 11rem;
+    // padding-left: 11rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-formular-container {
+    display: flex;
+    margin: auto;
 }
 
 .title-fomular-container {
     display: flex;
     height: 72%;
+    width: 88%;
 }
 
 .title-container {
@@ -83,6 +91,8 @@ input.message {
     height: 665px;
     display: flex;
     flex-direction: column;
+    margin-right: 49px;
+    margin-left: 14px;
 }
 
 
@@ -115,7 +125,7 @@ input.message {
     font-size: 14px;
 }
 
-.legal-policy-copy-container {
+footer {
     display: flex;
     flex-direction: column;
 }
@@ -152,4 +162,16 @@ a:active {
 .pp-text:active {
     text-decoration: underline;
     color: #FFFDFD;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.rectangel {
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, #B5E93B, #547800);
+    position: absolute;
+    right: 0;
 }

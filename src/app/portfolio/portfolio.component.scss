@@ -8,9 +8,21 @@
 section {
     background: linear-gradient(0.25turn, #000000, #2C2B2B, #0B0A0A, #323232, #0B0A0A);
     display: flex;
-    flex-direction: row;
-    width: 800vw;
+    width: fit-content;
+    height: 100vh;
 
+    @media (max-width: 1024px){
+        display: block;
+        width: 100vw;
+        height: fit-content;
+    background: linear-gradient(0.50turn, #000000, #2C2B2B, #0B0A0A, #323232, #0B0A0A);
+
+    }
+
+    // overflow-x: auto;
+    // overflow-y: hidden;
+    // white-space: nowrap;
+    // scroll-behavior: smooth;
     >div {
         display: flex;
     }
@@ -44,3 +56,4 @@ section {
 //     color: white;
 //     border-right: 2px solid white;
 // }
+

@@ -23,20 +23,66 @@
     margin-top: 32px;
     position: fixed;
     right: 16%;
+
 }
 
 .img-name-arrow-container {
     display: flex;
     justify-content: center;
     height: 100%;
-    gap: 24%;
-    padding-left: 10.5rem;
+    // padding-left: 9%;
+    margin: auto;
+    width: 72%;
+}
+
+.github {
+    background-image: url("../../../assets/img/git_btn_white.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+        background-image: url("../../../assets/img/git_btn_hover.svg");
+
+    }
+}
+
+.linkedin {
+    background-image: url("../../../assets/img/linkedin_btn_white.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+        background-image: url("../../../assets/img/linkedin_btn_hover.svg");
+
+    }
+}
+
+.email {
+    background-image: url("../../../assets/img/email_btn_white.png");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+        background-image: url("../../../assets/img/email_btn_hover.svg");
+
+    }
+}
+
+.social-media-container {
+    display: flex;
+    gap: 10%;
+    width: 124px;
 }
 
 .img-name-container {
     position: relative;
+    // margin: auto;
     // text-align: center;
-    // color: white;
+    display: flex;
+    justify-content: flex-end;
 
     >.name-dev-container {
         text-align: end;
@@ -52,6 +98,7 @@
         height: 100%;
         position: relative;
         // bottom: -32px;
+        // width: 90%;
     }
 }
 
@@ -59,6 +106,7 @@
 .name-subname-txt {
     font-size: 5.4rem;
     margin-bottom: 0;
+    // width: max-content;
 
 }
 
@@ -69,7 +117,65 @@
     -webkit-text-stroke: 1px #a5ff00;
 }
 
-// img:hover {
-//     z-index: 1;
-//     background-image: url("../../../assets/img/github_icon_green.svg");
-// }
+.profil-image:hover {
+    filter: none;
+}
+
+
+.arrow {
+    position: absolute;
+    right: 8%;
+    top: 39%;
+
+}
+
+@media (max-width:1024px) {
+    .arrow {
+        display: none;
+    }
+
+    .social-lang-container {
+        display: none;
+    }
+
+    .lp-section {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .img-name-arrow-container {
+        display: block;
+        width: 100%;
+    }
+
+    .img-name-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        position: static;
+    }
+
+    .profil-image {
+        position: static;
+        width: 80%;
+    }
+
+    .name-dev-container {
+        text-align: center;
+        position: static;
+        transform: none;
+    }
+
+    .name-subname-txt {
+        font-size: 8vw;
+    }
+
+    .dev-txt {
+        color: #B5E93B;
+        font-size: 7vw;
+        -webkit-text-stroke: 0px transparent;
+        font-weight: 400;
+    }
+}

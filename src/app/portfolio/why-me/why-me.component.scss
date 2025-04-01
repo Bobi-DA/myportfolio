@@ -4,6 +4,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .why-me-container {
@@ -22,11 +23,20 @@ button {
     float: right;
     margin-top: 2rem;
     font-family: 'Quantico';
+
+    &:hover{
+        background: linear-gradient(0.49turn, #B5E93B 64%, #547800);
+        color: #252525;
+    }
 }
 
 .txt-white {
     color: white;
-    margin-bottom: 3rem;
+    margin: 0;
+
+    // &:hover{
+    //     color: #B5E93B;
+    // }
 }
 
 h2 {
@@ -39,36 +49,92 @@ h2 {
 
 h3 {
     font-size: 48px;
-    margin: 0;
+    margin-bottom: 0;
     color: #B5E93B;
     font-weight: 700;
 }
 
 .why-me-local-icon-container {
     display: flex;
-    align-items: center;
+    // align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.remote-icon-txt-container {
+// .icon-txt-container {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     >p {
+//         margin-top: 0;
+//     }
+
+//     >.txt-white:hover {
+//         color: #B5E93B;
+//     }
+
+//     >.location-icon:hover {
+//         background-image: url(../../../assets/img/location_hover.svg);
+//     }
+
+//     >.remote-icon:hover {
+//         background-image: url(../../../assets/img/remote_hover.png);
+
+//     }
+// }
+
+.location-icon {
+    background-image: url(../../../assets/img/location_white.svg);
+    background-position-x: center;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    width: 243px;
+    height: 72px;
+    margin-bottom: 24px;
+
+    &:hover {
+        background-image: url(../../../assets/img/location_hover.svg);
+    }
+
+    >p:hover{
+        color: #B5E93B;
+    }
 }
 
-.local-icon-txt-container {
+.remote-icon {
+    background-image: url(../../../assets/img/remote_white.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
+    width: 243px;
+    height: 72px;
+    margin-bottom: 24px;
+
+
+    &:hover {
+        background-image: url(../../../assets/img/remote_hover.png);
+    }
+
+    >p:hover{
+        color: #B5E93B;
+    }
 }
 
 .why-me-arrow {
     display: flex;
-    height: 74%;
-    justify-content: center;
+    height: 24%;
+    /* position: relative; */
+    /* right: -12rem; */
+    width: 90%;
+    flex-direction: row-reverse;
     align-items: flex-end;
-    position: relative;
-    right: -12rem;
-    width: fit-content;
     // align-content: center;
+}
+
+.why-me-txt-iam-local-container {
+    width: 64%;
 }

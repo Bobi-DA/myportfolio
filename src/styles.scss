@@ -1,9 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-y: hidden;
+    //     display: flex;
+    //     // align-items: center;
+    //     height: 100vh;
+    //     overflow: hidden;
+    font-family: 'Quantico';
+
+    @media (max-width:1024px) {
+        overflow-y: visible;
+    }
+}
+
 .cp {
+    cursor: pointer;
+}
+
+button {
     cursor: pointer;
 }
 
@@ -17,18 +40,6 @@ html {
 img:hover {
     filter: drop-shadow(0 0 0.75rem #B5E93B);
 }
-
-
-body {
-    margin: 0;
-    overflow-y: hidden;
-    //     display: flex;
-    //     // align-items: center;
-    //     height: 100vh;
-    //     overflow: hidden;
-    font-family: 'Quantico';
-}
-
 
 
 /* quantico-regular - latin */
