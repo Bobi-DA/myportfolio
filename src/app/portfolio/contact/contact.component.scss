@@ -6,6 +6,7 @@ section {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-left: 5%;
 }
 
 .contact-formular-container {
@@ -30,20 +31,37 @@ section {
     }
 }
 
-.formular-container {
+form {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
+}
+
+.formular-container {
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 16px;
     max-width: 456px;
 }
 
-input {
+input:required {
     height: 60px;
     border: 1px solid #B5E93B;
     background-color: transparent;
     color: #D3ED97;
     border-radius: 30px;
     padding-left: 24px;
+}
+
+textarea:required {
+    height: 195px;
+    border: 1px solid #B5E93B;
+    background-color: transparent;
+    color: #D3ED97;
+    border-radius: 30px;
+    padding-left: 24px;
+    padding-top: 24px;
+    resize: none;
 }
 
 input.message {
@@ -142,7 +160,7 @@ footer {
 }
 
 .my-work-arrow_2 {
-    margin: 6rem 0;
+    margin: 5.5rem 0;
 }
 
 
