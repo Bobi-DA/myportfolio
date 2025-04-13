@@ -138,3 +138,14 @@ h3 {
 .why-me-txt-iam-local-container {
     width: 64%;
 }
+
+
+@media (max-width:1024px) {
+    .why-me-arrow{
+        display: none;
+    }
+
+    .why-me-container{
+        justify-content: center;
+    }
+}

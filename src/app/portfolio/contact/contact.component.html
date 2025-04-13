@@ -5,15 +5,18 @@
                 <h2>Contact me</h2>
             </div>
             <div class="formular-container">
-                <form>
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <!-- <label for="name"></label> -->
-                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                    <input [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" required>
 
                     <!-- <label for="email"></label> -->
-                    <input type="text" name="email" id="email" placeholder="Your e-mail" required>
+                    <input [(ngModel)]="contactData.email" type="text" name="email" id="email" placeholder="Your e-mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 
                     <!-- <label for="subject"></label> -->
-                    <textarea id="subject" name="subject" placeholder="Your message.." required></textarea>
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" placeholder="Your message.." required></textarea>
+                    @if (!message.valid && message.touched && !message.disabled) {
+                        <span style="color: aliceblue;">Please enter a message</span>
+                    }
 
                     <div class="check-privacy-container">
                         <input type="checkbox" name="" id="checkbox" required>
@@ -39,7 +42,7 @@
             </p>
             <div class="dflex-acenter-jcend">
                 <img src="../../../assets/img/icon-email.svg" alt="">
-                <a class="ct-fffdfd fs-18" href="mailto:bjakovljevic@hotmail.com">E-mail: bjakovljevicgmail.com</a>
+                <a class="ct-fffdfd fs-18" href="mailto:info@boban-jakovljevic.de">E-mail: info&#64;boban-jakovljevic.de</a>
             </div>
             <br>
             <div class="dflex-acenter-jcend">

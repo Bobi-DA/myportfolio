@@ -47,3 +47,9 @@ h2 {
     right: 64px;
     height: 72%;
 }
+
+@media (max-width:1024px) {
+    .skill-arrow{
+        display: none;
+    }
+}

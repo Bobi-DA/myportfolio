@@ -13,7 +13,7 @@ export class ProjectLayoutComponent {
   //   {
   //     title:"Project Join",
   //     img:"",
-
+         
   //   }
   // ]
 }
