@@ -96,5 +96,8 @@ img:hover {
 }
 
 @media (max-width:1024px) {
-    
+    html {
+        overflow-x: hidden;
+        scrollbar-width: none;
+    }
 }

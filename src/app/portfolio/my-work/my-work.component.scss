@@ -116,7 +116,7 @@ p {
     margin: 0 6rem;
 }
 
-.my-work-arrow_2{
+.my-work-arrow_2 {
     height: 72%;
     display: flex;
     margin: 0 6rem;
@@ -237,4 +237,91 @@ p {
             font-weight: 400;
         }
     }
+}
+
+.project-layout {
+    display: flex;
+    align-items: center;
+}
+
+
+
+@media (min-width:1024px) {
+    .ongoing-txt-btn-container {
+        >.need-a-teamplayer-txt-responsive {
+            display: none;
+
+        }
+    }
+
+}
+
+@media (max-width:1024px) {
+    .my-work-container {
+        display: block;
+    }
+
+    section {
+        padding: 0px 24px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        margin-bottom: 8em;
+    }
+
+    .my-work-title {
+        >h2 {
+            writing-mode: horizontal-tb;
+            margin: 40px 46px;
+        }
+    }
+
+    .my-work-arrow,
+    .my-work-arrow_2 {
+        display: none;
+    }
+
+    .project-layout {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .title-references-container {
+        flex-direction: column;
+        align-items: center;
+
+        >.my-work-title{
+            display: none;
+        }
+    }
+
+    .references-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .ongoing-txt-btn-container {
+        width: 100%;
+        margin-top: 4em;
+
+        >.btn-letstalk-container {
+            display: none;
+        }
+
+    }
+
+    .ongoing-txt-btn-container {
+        >.need-a-teamplayer-txt-responsive {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 5rem 0 2rem 0;
+
+            h4{
+                margin-left: 0;
+            }
+        }
+    }
+
 }

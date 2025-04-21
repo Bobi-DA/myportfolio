@@ -19,7 +19,6 @@ export class ContactComponent {
     message: ""
   }
 
-  // mailTest = true;
 
   post = {
     endPoint: 'https://boban-jakovljevic.de/sendMail.php',

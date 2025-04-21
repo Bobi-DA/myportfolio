@@ -135,6 +135,10 @@
     font-size: 18px;
 }
 
+.d-none{
+    display: none;
+}
+
 @media (max-width:1024px) {
     .arrow {
         display: none;
@@ -148,6 +152,7 @@
         display: block;
         height: 100%;
         width: 100%;
+        margin-bottom: 8em;
     }
 
     .img-name-arrow-container {
@@ -163,6 +168,8 @@
         position: static;
 
         >.name-dev-container {
+            flex-direction: column-reverse;
+            display: flex;
             text-align: center;
             position: static;
             transform: none;
@@ -182,8 +189,15 @@
 
     .dev-txt {
         color: #B5E93B;
-        font-size: 7vw;
+        font-size: 6vw;
         -webkit-text-stroke: 0px transparent;
         font-weight: 400;
+    }
+
+    .responsive-local{
+        color: #FFFDFD;
+        font-size: 3vw;
+        font-weight: 400;
+        display: block;
     }
 }

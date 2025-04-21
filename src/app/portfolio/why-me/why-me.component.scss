@@ -24,7 +24,7 @@ button {
     margin-top: 2rem;
     font-family: 'Quantico';
 
-    &:hover{
+    &:hover {
         background: linear-gradient(0.49turn, #B5E93B 64%, #547800);
         color: #252525;
     }
@@ -98,7 +98,7 @@ h3 {
         background-image: url(../../../assets/img/location_hover.svg);
     }
 
-    >p:hover{
+    >p:hover {
         color: #B5E93B;
     }
 }
@@ -119,7 +119,7 @@ h3 {
         background-image: url(../../../assets/img/remote_hover.png);
     }
 
-    >p:hover{
+    >p:hover {
         color: #B5E93B;
     }
 }
@@ -141,11 +141,50 @@ h3 {
 
 
 @media (max-width:1024px) {
-    .why-me-arrow{
+
+    section {
+        padding: 0 24px;
+    }
+
+    .why-me-section {
+        height: auto;
+        margin-bottom: 8em;
+    }
+
+    .why-me-arrow {
         display: none;
     }
 
-    .why-me-container{
+    .why-me-container {
         justify-content: center;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responsive-iam-txt {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .remote-icon .location-icon {
+        margin: 0px;
+    }
+
+    .why-me-txt-iam-local-container {
+        width: 100%;
+    }
+
+    .why-me-title {
+        width: 100%;
+
+        >h2 {
+            writing-mode: horizontal-tb;
+        }
     }
 }

@@ -193,3 +193,117 @@ a:active {
     position: absolute;
     right: 0;
 }
+
+
+@media (min-width:1024px) {
+    .info-container {
+        display: block;
+    }
+
+    .social-media-container-responsive,
+    .responsive-txt-container {
+        display: none;
+    }
+}
+
+
+@media (max-width:1024px) {
+
+    .my-work-arrow_2,
+    .legal-police-copy-container {
+        display: none;
+    }
+
+    .title-fomular-container,
+    .contact-formular-container {
+        display: block;
+    }
+
+    section {
+        display: block;
+        align-items: normal;
+        padding: 0 24px;
+        position: static;
+        height: auto;
+    }
+
+    .rectangel {
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(180deg, #B5E93B, #547800);
+
+    }
+
+    .title-container {
+        >h2 {
+            writing-mode: horizontal-tb;
+        }
+    }
+
+
+    .info-container {
+        display: none;
+    }
+
+    .formular-container {
+        max-width: none;
+    }
+
+    .social-media-container-responsive {
+        display: flex;
+        gap: 3rem;
+        height: 11rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .github {
+        background-image: url("../../../assets/img/git_btn_white.png");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        scale: 1.5;
+
+        &:hover {
+            background-image: url("../../../assets/img/git_btn_hover.svg");
+
+        }
+    }
+
+    .linkedin {
+        background-image: url("../../../assets/img/linkedin_btn_white.png");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        scale: 1.5;
+
+        &:hover {
+            background-image: url("../../../assets/img/linkedin_btn_hover.svg");
+
+        }
+    }
+
+    .email {
+        background-image: url("../../../assets/img/email_btn_white.png");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        scale: 1.5;
+
+        &:hover {
+            background-image: url("../../../assets/img/email_btn_hover.svg");
+
+        }
+
+    }
+
+    .responsive-txt-container {
+        display: block;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    .dflex-acenter-jcend{
+        justify-content: normal;
+    }
+}
