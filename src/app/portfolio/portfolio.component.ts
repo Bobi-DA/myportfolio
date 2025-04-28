@@ -13,20 +13,25 @@ import { ContactComponent } from "./contact/contact.component";
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent {
-  // @ViewChild('portfolioContainer') portfolioContainer!: ElementRef;
 
-  // ngAfterViewInit() {
-  //   const container = this.portfolioContainer.nativeElement;
-    
-  //   container.addEventListener('wheel', (event: WheelEvent) => {
-  //     // Wenn vertikales Scrollen erkannt wird
-  //   console.log('Wheel event deltaY:', event.deltaY); // Debug-Ausgabe
 
-  //     if (event.deltaY !== 0) {
-  //       event.preventDefault(); // Verhindert vertikales Scrollen
-  //       container.scrollLeft += event.deltaY; // Scrollt horizontal
-  //     }
-  //   }, { passive: false });
-  // }
+export class PortfolioComponent implements AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+
+  ngAfterViewInit() {
+    // Nur wenn die Bildschirmbreite größer als 1024px ist
+    if (window.innerWidth > 1024) {
+      const container = this.scrollContainer.nativeElement;
+
+      container.addEventListener('wheel', (event: WheelEvent) => {
+        
+        if (event.deltaY !== 0) {
+          event.preventDefault(); // normales vertikales Scrollen blockieren
+          container.scrollLeft += event.deltaY; // horizontal scrollen
+        }
+      }, { passive: false });
+    }
+  }
 }
+
+

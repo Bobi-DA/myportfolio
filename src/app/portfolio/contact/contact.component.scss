@@ -201,9 +201,11 @@ a:active {
     }
 
     .social-media-container-responsive,
-    .responsive-txt-container {
+    .responsive-txt-container,
+    .arrow-responsive {
         display: none;
     }
+
 }
 
 
@@ -214,7 +216,11 @@ a:active {
         display: none;
     }
 
-    .title-fomular-container,
+    .title-fomular-container {
+        display: block;
+        margin: auto;
+    }
+
     .contact-formular-container {
         display: block;
     }
@@ -225,6 +231,7 @@ a:active {
         padding: 0 24px;
         position: static;
         height: auto;
+        scroll-margin-top: 12vh;
     }
 
     .rectangel {
@@ -255,6 +262,7 @@ a:active {
         height: 11rem;
         width: 100%;
         justify-content: center;
+        align-items: center;
     }
 
     .github {
@@ -303,7 +311,16 @@ a:active {
         margin-bottom: 1em;
     }
 
-    .dflex-acenter-jcend{
+    .dflex-acenter-jcend {
         justify-content: normal;
+    }
+
+    .arrow-responsive {
+        width: 100%;
+        scale: 1.5;
+        height: 155px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

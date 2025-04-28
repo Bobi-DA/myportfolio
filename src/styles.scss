@@ -11,14 +11,11 @@ html {
 
 body {
     overflow-y: hidden;
-    //     display: flex;
-    //     // align-items: center;
-    //     height: 100vh;
-    //     overflow: hidden;
     font-family: 'Quantico';
 
     @media (max-width:1024px) {
         overflow-y: visible;
+        overflow-x: hidden;
     }
 }
 

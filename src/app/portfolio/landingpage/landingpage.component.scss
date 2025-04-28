@@ -33,9 +33,9 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    // padding-left: 9%;
     margin: auto;
     width: 72%;
+    position: relative;
 }
 
 .github {
@@ -126,7 +126,7 @@
 
 .arrow {
     position: absolute;
-    right: 8%;
+    right: 4%;
     top: 39%;
 
 }
@@ -140,6 +140,12 @@
 }
 
 @media (max-width:1024px) {
+
+    section{
+        scroll-margin-top: 11vh;
+    }
+
+
     .arrow {
         display: none;
     }

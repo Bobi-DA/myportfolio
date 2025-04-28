@@ -63,9 +63,35 @@ img {
     }
 
     .links-container {
+        margin: auto;
+        background: linear-gradient(180deg, #B5E93B, #547800);
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 48px;
+        padding: 32px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
         writing-mode: horizontal-tb;
         display: none;
+        position: fixed;
+        top: 0;
+    }
+
+    .burger-menu-reponsive {
+        position: absolute;
+        right: 48px;
+        top: 37%;
+        background-image: url("../../../assets/img/burger_menu.svg");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        scale: 1.5;
+
+        &:hover {
+            background-image: url("../../../assets/img/burger_menu_hover.svg");
+        }
     }
 }
-
-@media (min-width:1025px) {}
