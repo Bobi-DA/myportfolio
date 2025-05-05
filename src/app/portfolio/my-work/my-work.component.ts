@@ -9,5 +9,5 @@ import { ProjectLayoutComponent } from "./project-layout/project-layout.componen
   styleUrl: './my-work.component.scss'
 })
 export class MyWorkComponent {
-
+  
 }

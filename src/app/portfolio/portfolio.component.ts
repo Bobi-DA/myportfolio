@@ -28,6 +28,8 @@ export class PortfolioComponent implements AfterViewInit {
         if (event.deltaY !== 0) {
           event.preventDefault(); // normales vertikales Scrollen blockieren
           container.scrollLeft += event.deltaY; // horizontal scrollen
+          console.log(event.deltaY);
+          
         }
       }, { passive: false });
     }

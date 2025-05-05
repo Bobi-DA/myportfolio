@@ -1,17 +1,6 @@
-// .my-work-title {
-//     >h2 {
-//         font-size: 3.5rem;
-//         width: max-content;
-//         color: transparent;
-//         -webkit-text-stroke: 2px #a5ff00;
-//         writing-mode: sideways-lr;
-//         margin-right: 25px;
-//     }
-// }
-
-// .my-work-container {
-//     display: flex;
-// }
+.my-work-grid {
+    display: flex;
+}
 
 .my-work-bg {
     width: 57rem;
@@ -88,7 +77,7 @@ img {
     justify-content: space-evenly;
 }
 
-.screenshot-join {
+.screenshot {
     margin: 0 16px 20px 0;
     filter: grayscale(90%);
 }
@@ -104,7 +93,7 @@ p {
 }
 
 
-.screenshot-join:hover {
+.screenshot:hover {
     filter: none;
 }
 
@@ -239,66 +228,54 @@ p {
     }
 }
 
-// .my-work-grid {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr; // Zwei Spalten gleichmäßig verteilt
-//     grid-template-rows: auto auto; // Zwei Zeilen: Erste Zeile für Details & Screenshot, zweite Zeile für "Gelernt"
-//     gap: 2rem; // Abstand zwischen den Bereichen
-//     padding: 1rem;
-// }
-
-// .project-details {
-//     grid-column: 1 / 2; // Erste Spalte
-//     grid-row: 1; // Erste Zeile
-// }
-
-// .project-screenshot {
-//     grid-column: 2 / 3; // Zweite Spalte
-//     grid-row: 1; // Erste Zeile
-// }
-
-// .project-learned {
-//     grid-column: 1 / -1; // Spanne über beide Spalten (ganze Breite)
-//     grid-row: 2; // Zweite Zeile
-// }
-
 @media (min-width:1024px) {
-        .img-buttons-container-responsive {
-            display: none;
-        }
+    .img-buttons-container-responsive {
+        display: none;
+    }
+
+    // .show-more-container {
+    //     display: none;
+    // }
 }
 
 
 @media (max-width:1024px) {
+    .my-work-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
     .my-work-bg {
         margin-right: 0;
         width: 100%;
+        min-height: auto;
+        box-shadow: inset 0px -20px 32px 0px rgba(0, 0, 0, 0.2705882353);
     }
 
     .img-buttons-container {
         display: none;
     }
 
-    .img-buttons-container-responsive{
+    .img-buttons-container-responsive {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 40px;
 
-        >img{
+        >img {
             margin: 0 0 48px 0;
             height: auto;
-            width: 60%;
+            width: 100%;
         }
 
-        >.btn-container{
+        >.btn-container {
             width: 100%;
             justify-content: space-evenly;
         }
     }
 
-    .title-project{
-        >h1{
+    .title-project {
+        >h1 {
             font-size: 3rem;
         }
     }
@@ -306,4 +283,19 @@ p {
     .ul-my-work {
         margin: 0 8px;
     }
+
+    .show-more-container {
+        margin-top: 16px;
+        text-align: center;
+        margin-bottom: -24px;
+    }
+
+    .show-me-img {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media (max-width:800px) {
+
 }

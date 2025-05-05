@@ -8,6 +8,7 @@ section {
 }
 
 .my-work-title {
+    display: flex;
     >h2 {
         font-size: 3.5rem;
         width: max-content;
@@ -256,7 +257,7 @@ p {
         }
     }
 
-    .show-more-btn{
+    .show-more-btn {
         display: none;
     }
 }
@@ -296,9 +297,15 @@ p {
         flex-direction: row;
         align-items: normal;
         scrollbar-width: none;
+        overflow-x: scroll;
 
         >.my-work-title {
             display: none;
+
+            >h2 {
+                writing-mode: horizontal-tb;
+                margin: 40px 46px;
+            }
         }
     }
 
