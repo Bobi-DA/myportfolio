@@ -9,6 +9,9 @@ import { DOCUMENT } from '@angular/common';
   styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
+
+  widthWin = window.innerWidth;
+
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   scrollTo(sectionId: string) {
@@ -25,7 +28,9 @@ export class MenubarComponent {
   openBurgerMenu() {
     const el = this.linksContainer.nativeElement;
 
-    if (el.style.display === 'flex') {
+    if (this.widthWin < 1024 && el.style.display === 'flex') {
+      console.log(this.widthWin < 1024);
+
       el.style.display = 'none';
     } else {
       el.style.display = 'flex';
@@ -36,7 +41,7 @@ export class MenubarComponent {
   closeBurgerMenu() {
     const el = this.linksContainer.nativeElement;
 
-    if (el) {
+    if (this.widthWin < 1024 && el) {
       el.style.display = "none";
     }
   }

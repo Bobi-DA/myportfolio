@@ -1,16 +1,31 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
+  namePlaceholder = "Your name";
+
+  onNameFocus() {
+    this.namePlaceholder = 'Your name';
+  }
+  
+  onNameBlur(nameInput: NgModel) {
+    if (!nameInput.valid && nameInput.touched) {
+      this.namePlaceholder = 'Bitte geben Sie einen Namen ein';
+    } else {
+      this.namePlaceholder = 'Your name';
+    }
+  }
+  
   http = inject(HttpClient);
 
   contactData = {

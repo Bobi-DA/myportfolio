@@ -15,7 +15,8 @@
                 </p>
                 <div class="dflex-acenter-jcend">
                     <img src="../../../assets/img/icon-email.svg" alt="">
-                    <a class="ct-fffdfd fs-18" href="mailto:info@boban-jakovljevic.de">E-mail: info&#64;boban-jakovljevic.de</a>
+                    <a class="ct-fffdfd fs-18" href="mailto:info@boban-jakovljevic.de">E-mail:
+                        info&#64;boban-jakovljevic.de</a>
                 </div>
                 <br>
                 <div class="dflex-acenter-jcend">
@@ -24,18 +25,28 @@
                 </div>
             </div>
             <div class="formular-container">
+
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <!-- <label for="name"></label> -->
-                    <input [(ngModel)]="contactData.name" type="text" name="name" id="name" placeholder="Your name" required>
+                    <label for="name"></label>
+                    <input #name="ngModel" [(ngModel)]="contactData.name" minlength="3" type="text" name="name"
+                        id="name" [placeholder]="namePlaceholder" required (focus)="onNameFocus()"
+                        (blur)="onNameBlur(name)">
+                    <span *ngIf="!name.valid && name.touched && !name.disabled" style="color: #FD2E12;">Please enter
+                        a name</span>
 
                     <!-- <label for="email"></label> -->
-                    <input [(ngModel)]="contactData.email" type="text" name="email" id="email" placeholder="Your e-mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <label for="email"></label>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" id="email"
+                        placeholder="Your e-mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                    <span *ngIf="!email.valid && email.touched && !email.disabled" style="color: #FD2E12;">Please enter
+                        an e-mail</span>
 
                     <!-- <label for="subject"></label> -->
-                    <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" placeholder="Your message.." required></textarea>
-                    @if (!message.valid && message.touched && !message.disabled) {
-                        <span style="color: aliceblue;">Please enter a message</span>
-                    }
+                    <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject"
+                        placeholder="Your message.." required></textarea>
+                    <span *ngIf="!message.valid && message.touched && !message.disabled" style="color: #FD2E12;">Please
+                        enter a message</span>
 
                     <div class="check-privacy-container">
                         <input type="checkbox" name="" id="checkbox" required>
@@ -48,6 +59,7 @@
                         <button class="send-btn">Send</button>
                     </div>
                 </form>
+
             </div>
         </div>
         <div class="info-container ta-end">
@@ -61,7 +73,8 @@
             </p>
             <div class="dflex-acenter-jcend">
                 <img src="../../../assets/img/icon-email.svg" alt="">
-                <a class="ct-fffdfd fs-18" href="mailto:info@boban-jakovljevic.de">E-mail: info&#64;boban-jakovljevic.de</a>
+                <a class="ct-fffdfd fs-18" href="mailto:info@boban-jakovljevic.de">E-mail:
+                    info&#64;boban-jakovljevic.de</a>
             </div>
             <br>
             <div class="dflex-acenter-jcend">
