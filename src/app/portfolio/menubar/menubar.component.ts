@@ -1,10 +1,11 @@
 import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menubar',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './menubar.component.html',
   styleUrl: './menubar.component.scss'
 })

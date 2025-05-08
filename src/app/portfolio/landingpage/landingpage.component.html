@@ -6,9 +6,9 @@
             <div class="email cp"></div>
         </div>
         <div class="fs-18 ml-40 fc-fffdfd">
-            <span class="cp txt-hover">DE</span>
+            <span (click)="switchLanguage('de')" class="cp txt-hover">DE</span>
             <span> | </span>
-            <span class="cp txt-hover">EN</span>
+            <span (click)="switchLanguage('en')" class="cp txt-hover">EN</span>
         </div>
     </div>
 
@@ -18,7 +18,7 @@
             <div class="name-dev-container">
                 <div class="responsive-local d-none">Frankfurt am Main</div>
                 <h1 class="name-subname-txt">Boban Jakovljevic</h1>
-                <h3 class="dev-txt">Frontend Developer</h3>
+                <h3 class="dev-txt">{{ 'ROLE' | translate }}</h3>
             </div>
         </div>
         <div class="arrow">

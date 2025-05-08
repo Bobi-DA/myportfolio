@@ -1,10 +1,11 @@
 <section class="menubar-section">
     <a class="cp" (click)="scrollTo('landingpage')"><img src="./../../../assets/img/logo.png" alt="logo"></a>
     <div #linksContainer class="links-container">
-        <span (click)="scrollTo('contact'); closeBurgerMenu()" class="cp">Kontakt</span>
+        <span (click)="scrollTo('contact'); closeBurgerMenu()" class="cp">{{ 'MENUCONTACT' | translate }}</span>
         <span (click)="scrollTo('myWork'); closeBurgerMenu()" class="cp">Projekte</span>
         <span (click)="scrollTo('skills'); closeBurgerMenu()" class="cp">Skills</span>
         <span (click)="scrollTo('whyMe'); closeBurgerMenu()" class="cp">Warum ich</span>
     </div>
     <div (click)="openBurgerMenu()" class="burger-menu-reponsive cp"></div>
 </section>
+
