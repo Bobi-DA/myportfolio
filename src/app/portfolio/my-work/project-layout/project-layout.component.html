@@ -1,43 +1,46 @@
 <div *ngIf="screenWidth > 1024" class="my-work-grid">
-  <div *ngFor="let p of projects" class="my-work-bg">
-    <div class="title-project">
-      <h1>{{ p.id }}</h1>
-      <h2 class="h2-my-work">{{ p.title }}</h2>
-    </div>
-    <div class="about-tech-img-container">
+  <div class="translate-container" *ngFor="let p of ( 'PROJECTS' | translate ) as projects">
+    <div class="my-work-bg">
+      <div class="title-project">
+        <h1>{{ p.id }}</h1>
+        <h2 class="h2-my-work">{{ p.title }}</h2>
+      </div>
+      <div class="about-tech-img-container">
+        <div>
+          <ul class="ul-my-work">
+            <li>
+              <h4>{{"ABOUTPROJECT" | translate }} </h4>
+            </li>
+            <p>{{ p.description }}</p>
+            <li>
+              <h4>{{"TECHNOLOGIES" | translate }}</h4>
+            </li>
+            <p>{{ p.technologies }}</p>
+          </ul>
+        </div>
+        <div class="img-buttons-container">
+          <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
+          <div class="btn-container">
+            <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
+            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live
+              Test</button>
+          </div>
+        </div>
+      </div>
       <div>
         <ul class="ul-my-work">
           <li>
-            <h4>Über das Projekt</h4>
+            <h4>{{"WHATLEARNED" | translate }}</h4>
           </li>
-          <p>{{ p.description }}</p>
-          <li>
-            <h4>Von mir verwendete Technologien</h4>
-          </li>
-          <p>{{ p.technologies }}</p>
+          <p>{{ p.learned }}</p>
         </ul>
       </div>
-      <div class="img-buttons-container">
+      <div class="img-buttons-container-responsive">
         <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
         <div class="btn-container">
           <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
           <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live Test</button>
         </div>
-      </div>
-    </div>
-    <div>
-      <ul class="ul-my-work">
-        <li>
-          <h4>Was habe ich gelernt</h4>
-        </li>
-        <p>{{ p.learned }}</p>
-      </ul>
-    </div>
-    <div class="img-buttons-container-responsive">
-      <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
-      <div class="btn-container">
-        <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
-        <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live Test</button>
       </div>
     </div>
   </div>
@@ -53,7 +56,7 @@
         <!-- Nur kurze Infos anzeigen -->
         <ul class="ul-my-work">
           <li>
-            <h4>Über das Projekt</h4>
+            <h4>{{"ABOUTPROJECT" | translate }}</h4>
           </li>
           <p>{{ p.description }}</p>
         </ul>
@@ -64,11 +67,11 @@
         <div>
           <ul class="ul-my-work">
             <li>
-              <h4>Über das Projekt</h4>
+              <h4>{{"ABOUTPROJECT" | translate }}</h4>
             </li>
             <p>{{ p.description }}</p>
             <li>
-              <h4>Von mir verwendete Technologien</h4>
+              <h4>{{"TECHNOLOGIES" | translate }} </h4>
             </li>
             <p>{{ p.technologies }}</p>
           </ul>
@@ -84,7 +87,7 @@
         <div>
           <ul class="ul-my-work">
             <li>
-              <h4>Was habe ich gelernt</h4>
+              <h4>{{"WHATLEARNED" | translate }}</h4>
             </li>
             <p>{{ p.learned }}</p>
           </ul>

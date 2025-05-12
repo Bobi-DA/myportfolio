@@ -3,10 +3,14 @@
     "MENUPROJECT": "Projekte",
     "MENUSKILLS": "Skills",
     "MENUWHYME": "Warum ich",
+    "MYSKILLSET": "Meine Skills",
     "ROLE": "Frontend Entwickler",
+    "INTRODUCTIONSKILLS": "Eine kurze Vorstellung Ihrer Fähigkeiten. Heben Sie Ihre Erfahrung mit der Arbeit an verschiedenen Projekten unter Verwendung unterschiedlicher Front-End-Technologien hervor und betonen Sie Ihre Bereitschaft, zu lernen und sich an neue Technologien anzupassen.",
+    "MOTIVATION": "Zeigen Sie, dass Sie motiviert sind, Ihre Fähigkeiten zu verbessern, innovative Lösungen umzusetzen und sich über neue Technologien auf dem Laufenden zu halten.",
+    "IM": "Ich bin",
     "LOCALE": "beheimatet in Frankfurt am Main",
     "REMOTE": "offen für Remote-Arbeit",
-    "CONTACTME": "Kontakt aufnehmen",
+    "CONTACTME": "Kontaktaufnahme",
     "---": "",
     "ABOUTPROJECT": "Über das Projekt",
     "TECHNOLOGIES": "Von mir verwendete Technologien",
@@ -22,7 +26,10 @@
     "ONGOINGPROJECT": "Angehendes Projekt",
     "ONGOINGTEXT": "Arbeiten Sie derzeit an einem Projekt? Worum geht es dabei und welche Technologien verwenden Sie? Betonen Sie, dass eine gute Planung und Ausführung für den Erfolg Ihrer Arbeit und die Erzielung großartiger Ergebnisse unerlässlich sind.",
     "LETSTALK": "Lass uns reden",
+    "NEEDAEAMPLAYER": "Brauchen Sie einen Teamplayer?",
+    "WHATCOLLEAGUESSAID": "Hier, was meine Kollegen über mich gesagt haben",
     "------": "",
+    "REFERENCE": "Referenzen",
     "REFERENCE_1": "„Michael ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.“",
     "REFERENCE_2": "„Michael ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.“",
     "REFERENCE_3": "„Michael ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.“",
@@ -31,5 +38,39 @@
     "LETUSWORKTOGETHER": "Lassen Sie uns zusammenarbeiten.",
     "ENCOURAGETEXT": "Ermutigen Sie die Leute, mit Ihnen Kontakt aufzunehmen und beschreiben Sie, an welcher Aufgabe Sie interessiert sind. Drücken Sie Ihr Vertrauen in Ihre Fähigkeit aus, durch Ihr Fachwissen und Ihren Enthusiasmus, Ihre Fähigkeiten zu verbessern, einen sinnvollen Beitrag zu einem Team zu leisten.",
     "LEGALNOTICE": "Impressum",
-    "PRIVACYPOLICY":"Datenschutzerklärung"
+    "PRIVACYPOLICY": "Datenschutzerklärung",
+    "PROJECTS": [
+        {
+            "id": 1,
+            "title": "Projekt Join",
+            "description": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+            "technologies": "JavaScript, Firebase, HTML, CSS, Scrum",
+            "learned": "Im Projekt habe ich agile Methoden wie Scrum kennengelernt, die eine effektive Teamarbeit fördern. Durch die gemeinsame Nutzung von Git wurden Merge-Konflikte erfolgreich gelöst.",
+            "screenshot": "../../../assets/img/screenshot_join.svg",
+            "githubUrl": "https://github.com/…",
+            "expanded": false
+        },
+        {
+            "id": 2,
+            "title": "Projekt El Pollo Loco",
+            "description": "El Pollo Loco ist ein kleines, herausforderndes Browser-Spiel, in dem Gegner durch Sprünge besiegt, Flaschen eingesammelt und schließlich das verrückte, große Huhn bezwungen wird.",
+            "technologies": "JavaScript, HTML, CSS",
+            "learned": "Ein Browser-Spiel mit objektorientierter Programmierung wurde umgesetzt, das interaktive Elemente und dynamische Spielmechaniken integriert. Dabei habe ich praxisnah gelernt, wie OOP-Konzepte im Spielkontext angewendet und weiterführende Funktionen implementiert werden.",
+            "screenshot": "../../../assets/img/screenshot_loco.svg",
+            "githubUrl": "https://github.com/…",
+            "liveUrl": "https://boban-jakovljevic.de/elPolloLoco",
+            "expanded": false
+        },
+        {
+            "id": 3,
+            "title": "Projekt Pokedex",
+            "description": "Ein Pokedex ist eine digitale Enzyklopädie, in der alle Pokémon-Arten samt ihren Eigenschaften, Fähigkeiten und Entwicklungen erfasst sind. Er dient als Nachschlagewerk.",
+            "technologies": "JavaScript, REST-API, CSS, HTML",
+            "learned": "Im Pokedex-Projekt habe ich eine API integriert, um relevante Pokémon-Daten abzurufen und diese in ansprechenden Bildern darzustellen. Dabei konnte ich den Umgang mit API-Informationen und deren visuelle Aufbereitung praxisnah erlernen.",
+            "screenshot": "../../../assets/img/screenshot_pokedex.png",
+            "githubUrl": "https://github.com/…",
+            "liveUrl": "https://boban-jakovljevic.de/pokedex",
+            "expanded": false
+        }
+    ]
 }

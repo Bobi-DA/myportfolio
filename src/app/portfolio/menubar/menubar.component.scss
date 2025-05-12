@@ -45,6 +45,11 @@ img {
 
 }
 
+@media (min-width:1024px) {
+    .lang-resp-container {
+        display: none;
+    }
+}
 
 @media (max-width:1024px) {
     .menubar-section {
@@ -54,7 +59,11 @@ img {
         position: sticky;
         top: 0;
         box-shadow: inset 0px -20px 32px 0px rgba(0, 0, 0, 0.2705882353);
+    }
 
+    .lang-resp-container {
+        color: #4A4A4A;
+        font-size: 30px;
     }
 
     img {
