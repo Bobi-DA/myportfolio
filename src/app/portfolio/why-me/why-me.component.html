@@ -4,9 +4,7 @@
             <h2>{{ 'MENUWHYME' | translate }}</h2>
         </div>
         <div class="why-me-txt-iam-local-container">
-            <div class="txt-white">Write some information about yourself that is IT related. Why are you passionate
-                about coding?
-                What is your source of inspiration for improving your programming skills? </div>
+            <div class="txt-white"> {{'WRITESOMEINFO' | translate }} </div>
             <h3 class="responsive-iam-txt">{{ 'IM' | translate }}</h3>
             <div class="why-me-local-icon-container">
                 <div class="location-icon">
@@ -22,6 +20,6 @@
         </div>
     </div>
     <div class="why-me-arrow">
-        <a href="#skills"><img src="../../../assets/img/arrow_right.svg" alt=""></a>
+        <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_right.svg" alt="">
     </div>
 </section>

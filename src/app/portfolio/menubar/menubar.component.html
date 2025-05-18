@@ -2,9 +2,9 @@
     <a class="cp" (click)="scrollTo('landingpage')"><img src="./../../../assets/img/logo.png" alt="logo"></a>
     <div #linksContainer class="links-container">
         <div class="lang-resp-container fs-18 ml-40 fc-fffdfd">
-            <span (click)="switchLanguage('de')" class="cp txt-hover">DE</span>
+            <span (click)="switchLanguage('de'); closeBurgerMenu()" class="cp txt-hover">DE</span>
             <span> | </span>
-            <span (click)="switchLanguage('en')" class="cp txt-hover">EN</span>
+            <span (click)="switchLanguage('en'); closeBurgerMenu()" class="cp txt-hover">EN</span>
         </div>
         <span (click)="scrollTo('contact'); closeBurgerMenu()" class="cp">{{ 'MENUCONTACT' | translate }}</span>
         <span (click)="scrollTo('myWork'); closeBurgerMenu()" class="cp">{{ 'MENUPROJECT' | translate }}</span>

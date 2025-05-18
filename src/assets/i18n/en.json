@@ -7,6 +7,7 @@
     "ROLE": "Frontend Developer",
     "INTRODUCTIONSKILLS": "A short introduction of your skills. Highlight your experience of working on  different projects using different front-end technologies and emphasise your openness to learning and adapting to new technologies.",
     "MOTIVATION": "Show that you are motivated to improve your skills, implement innovative solutions and stay abreast of new technologies.",
+    "WRITESOMEINFO":"Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
     "IM": "I am",
     "LOCALE": "located in Frankfurt am Main",
     "REMOTE": "open to work remote",
@@ -39,6 +40,8 @@
     "ENCOURAGETEXT": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.",
     "LEGALNOTICE": "Legal notice",
     "PRIVACYPOLICY": "privacy policy",
+    "SHOWMEMORE": "Show me more",
+    "SHOWMELESS": "show me less",
     "PROJECTS": [
         {
             "id": 1,

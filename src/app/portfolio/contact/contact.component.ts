@@ -18,7 +18,7 @@ export class ContactComponent {
   onNameFocus() {
     this.namePlaceholder = 'Your name';
   }
-  
+
   onNameBlur(nameInput: NgModel) {
     if (!nameInput.valid && nameInput.touched) {
       this.namePlaceholder = 'Bitte geben Sie einen Namen ein';
@@ -26,7 +26,14 @@ export class ContactComponent {
       this.namePlaceholder = 'Your name';
     }
   }
-  
+
+  scrollTo() {
+    const element = document.getElementById('landingpage');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   http = inject(HttpClient);
 
   contactData = {

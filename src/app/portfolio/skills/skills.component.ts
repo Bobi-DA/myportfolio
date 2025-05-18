@@ -9,5 +9,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
+  scrollTo() {
+    const element = document.getElementById('myWork');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

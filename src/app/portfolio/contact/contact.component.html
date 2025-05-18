@@ -62,9 +62,7 @@
         <div class="info-container ta-end">
             <p class="ct-fffdfd mt-0"><span class="ct-d3ed97">{{"LETUSWORKTOGETHER"| translate}} </span> <br>
                 <br>
-                Encourage people to contact you and describe what role you are interested in. Express confidence in
-                your ability to make a meaningful contribution to a team through your expertise and enthusiasm for
-                improving your skills.
+                {{"ENCOURAGETEXT" | translate }}
                 <br>
                 <br>
             </p>
@@ -78,8 +76,8 @@
                 <img src="../../../assets/img/icon_phone.svg" alt="">
                 <a class="ct-fffdfd fs-18" href="tel:+1234567890">Tel: +1234567890</a>
             </div>
-            <div class="my-work-arrow_2">
-                <a href="#landingpage"><img src="../../../assets/img/arrow_left.svg" alt=""></a>
+            <div  class="my-work-arrow_2">
+                <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_left.svg" alt="">
             </div>
             <footer class="legal-policy-copy-container">
                 <a class="link" href="#">{{"LEGALNOTICE"|translate}}</a>
@@ -90,12 +88,21 @@
         </div>
     </div>
     <div class="arrow-responsive">
-        <a href="#landingpage"><img src="../../../assets/img/arrow_up_resp.svg" alt=""></a>
+        <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_up_resp.svg" alt="">
     </div>
     <div class="social-media-container-responsive">
         <div class="github cp"></div>
         <div class="linkedin cp"></div>
         <div class="email cp"></div>
     </div>
-    <div class="rectangel"></div>
+    <div class="rectangel">
+        <div class="footer-responsive-container">
+            <img src="../../../assets/img/logo_resp.png" alt="">
+            <p class="copyright">&#169; Boban Jakovljevic 2025</p>
+            <div class="footer-legal-privacy-responsive">
+                <a class="link-resp" href="#">{{"LEGALNOTICE"|translate}}</a>
+                <a class="link-resp" href="#">{{"PRIVACYPOLICY"|translate}}</a>
+            </div>
+        </div>
+    </div>
 </section>

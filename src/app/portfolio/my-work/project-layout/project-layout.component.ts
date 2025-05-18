@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface Project {
   id: number;
@@ -22,58 +22,38 @@ interface Project {
   styleUrl: './project-layout.component.scss'
 })
 
-
 export class ProjectLayoutComponent {
 
   screenWidth: number = window.innerWidth;
+  projects: Project[] = [];
+  
+
+  constructor(private translate: TranslateService) { }
 
   ngOnInit() {
+    this.loadProjects();
     window.addEventListener('resize', () => {
       this.screenWidth = window.innerWidth;
     });
+    this.translate.onLangChange.subscribe(() => {
+      this.loadProjects();
+    });
   }
 
-  projects: Project[] = [
-  //   {
-  //     id: 1,
-  //     title: 'Project Join',
-  //     description: 'Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
-  //     technologies: 'JavaScript, Firebase, HTML, CSS, Scrum',
-  //     learned: 'Im Projekt habe ich agile Methoden wie Scrum kennengelernt, die eine effektive Teamarbeit fördern. Durch die gemeinsame Nutzung von Git wurden Merge-Konflikte erfolgreich gelöst.',
-  //     screenshot: '../../../assets/img/screenshot_join.svg',
-  //     githubUrl: 'https://github.com/…',
-  //     expanded: false
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Project El Pollo Loco',
-  //     description: 'El Pollo Loco ist ein kleines, herausforderndes Browser-Spiel, in dem Gegner durch Sprünge besiegt, Flaschen eingesammelt und schließlich das verrückte, große Huhn bezwungen wird.',
-  //     technologies: 'JavaScript, HTML, CSS',
-  //     learned: 'Ein Browser-Spiel mit objektorientierter Programmierung wurde umgesetzt, das interaktive Elemente und dynamische Spielmechaniken integriert. Dabei habe ich praxisnah gelernt, wie OOP-Konzepte im Spielkontext angewendet und weiterführende Funktionen implementiert werden.',
-  //     screenshot: '../../../assets/img/screenshot_loco.svg',
-  //     githubUrl: 'https://github.com/…',
-  //     liveUrl: 'https://boban-jakovljevic.de/elPolloLoco',
-  //     expanded: false
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'Project Pokedex',
-  //     description: 'Ein Pokedex ist eine digitale Enzyklopädie, in der alle Pokémon-Arten samt ihren Eigenschaften, Fähigkeiten und Entwicklungen erfasst sind. Er dient als Nachschlagewerk.',
-  //     technologies: 'JavaScript, REST-API, CSS, HTML',
-  //     learned: 'Im Pokedex-Projekt habe ich eine API integriert, um relevante Pokémon-Daten abzurufen und diese in ansprechenden Bildern darzustellen. Dabei konnte ich den Umgang mit API-Informationen und deren visuelle Aufbereitung praxisnah erlernen.',
-  //     screenshot: '../../../assets/img/screenshot_pokedex.png',
-  //     githubUrl: 'https://github.com/…',
-  //     liveUrl: 'https://boban-jakovljevic.de/pokedex',
-  //     expanded: false
-  //   }
-  ];
+  loadProjects() {
+    this.translate.get('PROJECTS').subscribe((data) => {
+      this.projects = data;
+    });
+  }
 
 
   toggleExpanded(p: Project) {
+    
     p.expanded = !p.expanded;
-    console.log(window.innerWidth);
   }
 
-  window: any;
+  openLinkInNewTab(url: string){
+    window.open(url, '_blank');
+  }
 
 }

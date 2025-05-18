@@ -22,6 +22,16 @@ export class LandingpageComponent {
     this.translate.use(browserLang && ['de', 'en'].includes(browserLang) ? browserLang : 'de');
   }
 
+  scrollTo() {
+    console.log("click");
+    const element = document.getElementById('whyMe');
+    console.log(element);
+
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   switchLanguage(lang: string) {
     this.translate.use(lang);
   }

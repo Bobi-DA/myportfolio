@@ -339,3 +339,11 @@ p {
     }
 
 }
+
+@media (max-width:360px) {
+    .my-work-title{
+        >h2{
+            margin: auto auto 40px;
+        }
+    }
+}

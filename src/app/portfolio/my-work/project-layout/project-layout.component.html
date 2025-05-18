@@ -21,8 +21,8 @@
         <div class="img-buttons-container">
           <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
           <div class="btn-container">
-            <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live
+            <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
               Test</button>
           </div>
         </div>
@@ -38,8 +38,8 @@
       <div class="img-buttons-container-responsive">
         <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
         <div class="btn-container">
-          <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
-          <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live Test</button>
+          <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+          <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live Test</button>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
 
 
 <div *ngIf="screenWidth <= 1024" class="my-work-grid">
-  <div *ngFor="let p of projects" class="my-work-bg">
+  <div *ngFor="let p of ( 'PROJECTS' | translate ) as projects" class="my-work-bg">
     <!-- Titel & Bild bleiben gleich... -->
 
     <div class="about-tech-img-container">
@@ -79,8 +79,8 @@
         <div class="img-buttons-container">
           <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
           <div class="btn-container">
-            <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live
+            <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
               Test</button>
           </div>
         </div>
@@ -95,8 +95,8 @@
         <div class="img-buttons-container-responsive">
           <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
           <div class="btn-container">
-            <button class="btn-github" (click)="window.open(p.githubUrl, '_blank')">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="window.open(p.liveUrl, '_blank')">Live
+            <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
               Test</button>
           </div>
         </div>
@@ -112,8 +112,8 @@
 
     <div *ngIf="screenWidth <= 1024" class="show-more-container">
       <a class="cp" (click)="toggleExpanded(p)">
-        <img class="show-me-img" *ngIf="p.expanded" src="../../../../assets/img/show_less.svg" alt="Show me less">
-        <img class="show-me-img" *ngIf="!p.expanded" src="../../../../assets/img/show_more.svg" alt="Show me more">
+        <img class="show-me-img" *ngIf="p.expanded" src="../../../../assets/img/show_less.svg" alt='{{"SHOWMELESS" | translate }}'>
+        <img class="show-me-img" *ngIf="!p.expanded" src="../../../../assets/img/show_more.svg" alt='{{"SHOWMEMORE" | translate }}'>
       </a>
     </div>
 

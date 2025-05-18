@@ -7,6 +7,7 @@
     "ROLE": "Frontend Entwickler",
     "INTRODUCTIONSKILLS": "Eine kurze Vorstellung Ihrer Fähigkeiten. Heben Sie Ihre Erfahrung mit der Arbeit an verschiedenen Projekten unter Verwendung unterschiedlicher Front-End-Technologien hervor und betonen Sie Ihre Bereitschaft, zu lernen und sich an neue Technologien anzupassen.",
     "MOTIVATION": "Zeigen Sie, dass Sie motiviert sind, Ihre Fähigkeiten zu verbessern, innovative Lösungen umzusetzen und sich über neue Technologien auf dem Laufenden zu halten.",
+    "WRITESOMEINFO":"Schreiben Sie einige Informationen über sich selbst, die mit IT zu tun haben. Warum programmieren Sie leidenschaftlich gern? Was inspiriert Sie, Ihre Programmierkenntnisse zu verbessern?",
     "IM": "Ich bin",
     "LOCALE": "beheimatet in Frankfurt am Main",
     "REMOTE": "offen für Remote-Arbeit",
@@ -39,6 +40,8 @@
     "ENCOURAGETEXT": "Ermutigen Sie die Leute, mit Ihnen Kontakt aufzunehmen und beschreiben Sie, an welcher Aufgabe Sie interessiert sind. Drücken Sie Ihr Vertrauen in Ihre Fähigkeit aus, durch Ihr Fachwissen und Ihren Enthusiasmus, Ihre Fähigkeiten zu verbessern, einen sinnvollen Beitrag zu einem Team zu leisten.",
     "LEGALNOTICE": "Impressum",
     "PRIVACYPOLICY": "Datenschutzerklärung",
+    "SHOWMEMORE":"Zeig mir mehr",
+    "SHOWMELESS":"Zeig mir weniger",
     "PROJECTS": [
         {
             "id": 1,

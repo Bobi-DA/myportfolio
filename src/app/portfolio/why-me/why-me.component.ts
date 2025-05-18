@@ -9,5 +9,10 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './why-me.component.scss'
 })
 export class WhyMeComponent {
-
+  scrollTo() {
+    const element = document.getElementById('skills');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

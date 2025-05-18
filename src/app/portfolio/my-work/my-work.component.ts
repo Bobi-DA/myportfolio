@@ -11,4 +11,10 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MyWorkComponent {
   
+    scrollTo() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
