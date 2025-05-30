@@ -54,6 +54,26 @@ input:required {
     padding-left: 24px;
 }
 
+
+input.input-error,
+textarea:required.input-error {
+    border: 1px solid #FD2E12;
+}
+
+input.input-error::placeholder,
+textarea.input-error::placeholder {
+    color: #FD2E12;
+}
+
+
+
+input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+}
+
+
+
 textarea:required {
     height: 195px;
     border: 1px solid #B5E93B;
@@ -95,15 +115,22 @@ input.message {
 }
 
 .send-btn {
-    background-color: #9E9D9D;
+    background-color: #B5E93B;
     width: 106px;
     height: 43px;
     border-radius: 30px;
     border: none;
     font-weight: 400;
     font-family: 'Quantico';
-    color: #4A4A4A;
+    color: #252525;
+
+    &:disabled {
+        background-color: #9E9D9D;
+        color: #4A4A4A;
+        cursor: default;
+    }
 }
+
 
 .info-container {
     width: 417px;
@@ -112,6 +139,10 @@ input.message {
     flex-direction: column;
     margin-right: 49px;
     margin-left: 14px;
+
+    >p {
+        text-decoration-line: none;
+    }
 }
 
 
@@ -147,6 +178,7 @@ input.message {
 footer {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .link {
@@ -154,6 +186,7 @@ footer {
     color: #FFFDFD;
     font-weight: 400;
     font-size: 14px;
+    width: fit-content;
 }
 
 .fz-18 {
@@ -335,7 +368,7 @@ a:active {
 
     .footer-responsive-container {
         color: #4A4A4A;
-        
+
         >img {
             height: 80px;
             width: auto;
@@ -348,7 +381,8 @@ a:active {
         }
     }
 
-    .copyright, .link-resp{
+    .copyright,
+    .link-resp {
         color: #4A4A4A;
     }
 }

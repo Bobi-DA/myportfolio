@@ -28,39 +28,49 @@
                     <!-- <label for="name"></label> -->
                     <label for="name"></label>
                     <input #name="ngModel" [(ngModel)]="contactData.name" minlength="3" type="text" name="name"
-                        id="name" [placeholder]="namePlaceholder" required (focus)="onNameFocus()"
-                        (blur)="onNameBlur(name)">
-                    <span *ngIf="!name.valid && name.touched && !name.disabled" style="color: #FD2E12;">Please enter
-                        a name</span>
+                        id="name" [placeholder]="namePlaceholder" required (focus)="onNameFocus('name')"
+                        (blur)="onNameBlur(name)" [ngClass]="{ 'input-error': !name.valid && name.touched }" />
+
 
                     <!-- <label for="email"></label> -->
                     <label for="email"></label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" id="email"
-                        placeholder="Your e-mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                    <span *ngIf="!email.valid && email.touched && !email.disabled" style="color: #FD2E12;">Please enter
-                        an e-mail</span>
+                        [placeholder]="emailPlaceholder" required (blur)="onEmailBlur(email)"
+                        (focus)="onNameFocus('email')" [ngClass]="{ 'input-error': !email.valid && email.touched }"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
 
                     <!-- <label for="subject"></label> -->
                     <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject"
-                        placeholder="Your message.." required></textarea>
-                    <span *ngIf="!message.valid && message.touched && !message.disabled" style="color: #FD2E12;">Please
-                        enter a message</span>
+                        [placeholder]="messagePlaceholder"
+                        [ngClass]="{ 'input-error': !message.valid && message.touched }" required></textarea>
+
 
                     <div class="check-privacy-container">
-                        <input type="checkbox" name="" id="checkbox" required>
-                        <div>I've read the <a class="ct-fffdfd pp-text" href="http://">privacy policy</a> and agree to
-                            the processing of my data as outlined.</div>
+                        <input #checkbox="ngModel" [(ngModel)]="isChecked" type="checkbox" name="agree" id="Checkbox"
+                            required>
+                        <div [innerHTML]="'PRIVACY_TEXT' | translate:{ url: 'datenschutz' }"></div>
 
                     </div>
                     <div class="send-btn-container">
-                        <button class="send-btn">Send</button>
+                        <span *ngIf="!email.valid && email.touched && !email.disabled" style="color: #FD2E12;">
+                            {{'ENTEREMAIL' | translate }} </span>
+                        <span *ngIf="!name.valid && name.touched && !name.disabled"
+                            style="color: #FD2E12;">{{'ENTERNAME' | translate }}</span>
+                        <span *ngIf="!message.valid && message.touched && !message.disabled"
+                            style="color: #FD2E12;">{{'ENTERMESSAGE' | translate }}</span>
+                        <span *ngIf="!isChecked && !checkbox.valid && checkbox.touched && !checkbox.disabled"
+                            style="color: #FD2E12;">{{'ENTERMESSAGE' | translate }}</span>
+
+                        <button class="send-btn" [disabled]="contactForm.invalid || !isChecked">Send</button>
                     </div>
                 </form>
 
             </div>
         </div>
         <div class="info-container ta-end">
-            <p class="ct-fffdfd mt-0"><span class="ct-d3ed97">{{"LETUSWORKTOGETHER"| translate}} </span> <br>
+            <p class="ct-fffdfd mt-0">
+                <span class="ct-d3ed97">{{"LETUSWORKTOGETHER"| translate}}</span> <br>
                 <br>
                 {{"ENCOURAGETEXT" | translate }}
                 <br>
@@ -76,13 +86,13 @@
                 <img src="../../../assets/img/icon_phone.svg" alt="">
                 <a class="ct-fffdfd fs-18" href="tel:+1234567890">Tel: +1234567890</a>
             </div>
-            <div  class="my-work-arrow_2">
+            <div class="my-work-arrow_2">
                 <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_left.svg" alt="">
             </div>
             <footer class="legal-policy-copy-container">
-                <a class="link" href="#">{{"LEGALNOTICE"|translate}}</a>
+                <a class="link" href="/impressum" target='_blank'>{{"LEGALNOTICE"|translate}}</a>
                 <br>
-                <a class="link" href="#">{{"PRIVACYPOLICY"|translate}}</a>
+                <a class="link" href="/datenschutz" target='_blank'>{{"PRIVACYPOLICY"|translate}}</a>
                 <p class="copyright">&#169; Boban Jakovljevic 2025</p>
             </footer>
         </div>

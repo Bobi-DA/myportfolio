@@ -35,4 +35,8 @@ export class LandingpageComponent {
   switchLanguage(lang: string) {
     this.translate.use(lang);
   }
+
+  goToLink(url: string){
+    window.open(url, "_blank");
+}
 }

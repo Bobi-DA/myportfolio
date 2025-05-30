@@ -13,17 +13,44 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  namePlaceholder = "Your name";
+  isChecked: boolean = false;
 
-  onNameFocus() {
-    this.namePlaceholder = 'Your name';
+  namePlaceholder = "Your name";
+  emailPlaceholder = "Your e-mail";
+  messagePlaceholder = "Your message";
+
+  ngOnInit() {
+    console.log('Initialwert:', this.isChecked);
+  }
+
+  onNameFocus(input: string) {
+    console.log(input);
+
+    if (input == "name") {
+      this.namePlaceholder = 'Dein Name';
+    }
+    if (input == "email") {
+      this.emailPlaceholder = 'Deine E-Mail-Adresse';
+    }
   }
 
   onNameBlur(nameInput: NgModel) {
-    if (!nameInput.valid && nameInput.touched) {
-      this.namePlaceholder = 'Bitte geben Sie einen Namen ein';
+    // if (!nameInput.valid && nameInput.touched) {
+    //   this.namePlaceholder = 'Bitte geben Sie einen Namen ein';
+    // } else {
+    //   this.namePlaceholder = 'Dein Name';
+    // }
+
+    {
+      this.namePlaceholder = !nameInput.valid && nameInput.touched ? 'Bitte geben Sie einen Namen ein' : 'Your name';
+    }
+  }
+
+  onEmailBlur(emailInput: NgModel) {
+    if (!emailInput.valid && emailInput.touched) {
+      this.emailPlaceholder = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
     } else {
-      this.namePlaceholder = 'Your name';
+      this.emailPlaceholder = 'Deine E-Mail';
     }
   }
 
