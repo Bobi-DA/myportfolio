@@ -7,10 +7,10 @@
             <div class="txt-white"> {{'WRITESOMEINFO' | translate }} </div>
             <h3 class="responsive-iam-txt">{{ 'IM' | translate }}</h3>
             <div class="why-me-local-icon-container">
-                <div class="location-icon">
+                <div class="location-icon animation-location">
                     <p class="txt-white">{{ 'LOCALE' | translate }}</p>
                 </div>
-                <div class="remote-icon">
+                <div class="remote-icon animation-remote">
                     <p class="txt-white">{{ 'REMOTE' | translate }}</p>
                 </div>
             </div>
@@ -20,6 +20,6 @@
         </div>
     </div>
     <div class="why-me-arrow">
-        <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_right.svg" alt="">
+        <img (click)="scrollTo()" class="cp slide-left" src="../../../assets/img/arrow_right.svg" alt="">
     </div>
 </section>

@@ -6,5 +6,5 @@ import { DatenschutzComponent } from './portfolio/datenschutz/datenschutz.compon
 export const routes: Routes = [
     { path: '', component: PortfolioComponent },
     { path: 'impressum', component: ImpressumComponent },
-    { path: 'datenschutz', component: DatenschutzComponent },
+    { path: 'datenschutz', component: DatenschutzComponent }
 ];

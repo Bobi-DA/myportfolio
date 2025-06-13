@@ -112,6 +112,7 @@ input.message {
 
 .send-btn-container {
     text-align: end;
+
 }
 
 .send-btn {
@@ -233,6 +234,58 @@ a:active {
     }
 }
 
+.slide-right {
+	-webkit-animation: slide-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+	        animation: slide-right 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.slide-bottom {
+	-webkit-animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+	        animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate-reverse both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+}
+
 
 @media (min-width:1024px) {
 
@@ -308,7 +361,7 @@ a:active {
     }
 
     .github {
-        background-image: url("../../../assets/img/git_btn_white.png");
+        background-image: url("../../../assets/img/git_btn_white.svg");
         background-repeat: no-repeat;
         width: 30px;
         height: 30px;
@@ -321,7 +374,7 @@ a:active {
     }
 
     .linkedin {
-        background-image: url("../../../assets/img/linkedin_btn_white.png");
+        background-image: url("../../../assets/img/linkedin_btn_white.svg");
         background-repeat: no-repeat;
         width: 30px;
         height: 30px;
@@ -334,7 +387,7 @@ a:active {
     }
 
     .email {
-        background-image: url("../../../assets/img/email_btn_white.png");
+        background-image: url("../../../assets/img/email_btn_white.svg");
         background-repeat: no-repeat;
         width: 30px;
         height: 30px;
@@ -351,6 +404,9 @@ a:active {
         display: block;
         text-align: left;
         margin-bottom: 1em;
+        >p{
+        text-decoration: none;
+        }
     }
 
     .dflex-acenter-jcend {

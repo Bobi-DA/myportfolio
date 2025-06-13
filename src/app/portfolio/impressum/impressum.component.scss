@@ -1,0 +1,42 @@
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(0.87turn, #2C2B2B, #0B0A0A);
+}
+
+.legal-notice-container {
+  line-height: 1.6;
+  padding: 2em 6em 3.5em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFFDFD;
+  background: linear-gradient(0.25turn, #333D1A, #414C29);
+  border-radius: 30px;
+  width: 57rem;
+}
+
+.impressum {
+  color: #B5E93B;
+}
+
+h1 {
+  color: #FFFDFD;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #FFFDFD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -34,9 +34,6 @@ button {
     color: white;
     margin: 0;
 
-    // &:hover{
-    //     color: #B5E93B;
-    // }
 }
 
 h2 {
@@ -61,29 +58,6 @@ h3 {
     flex-wrap: wrap;
 }
 
-// .icon-txt-container {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     >p {
-//         margin-top: 0;
-//     }
-
-//     >.txt-white:hover {
-//         color: #B5E93B;
-//     }
-
-//     >.location-icon:hover {
-//         background-image: url(../../../assets/img/location_hover.svg);
-//     }
-
-//     >.remote-icon:hover {
-//         background-image: url(../../../assets/img/remote_hover.png);
-
-//     }
-// }
-
 .location-icon {
     background-image: url(../../../assets/img/location_white.svg);
     background-position-x: center;
@@ -94,9 +68,9 @@ h3 {
     height: 72px;
     margin-bottom: 24px;
 
-    &:hover {
-        background-image: url(../../../assets/img/location_hover.svg);
-    }
+    // &:hover {
+    //     background-image: url(../../../assets/img/location_hover.svg);
+    // }
 
     >p:hover {
         color: #B5E93B;
@@ -115,9 +89,9 @@ h3 {
     margin-bottom: 24px;
 
 
-    &:hover {
-        background-image: url(../../../assets/img/remote_hover.png);
-    }
+    // &:hover {
+    //     background-image: url(../../../assets/img/remote_hover.png);
+    // }
 
     >p:hover {
         color: #B5E93B;
@@ -139,6 +113,30 @@ h3 {
     width: 64%;
 }
 
+@keyframes location {
+  from {background-image: url(./../../../assets/img/location_white.svg);}
+  to {background-image: url(./../../../assets/img/location_hover.svg);}
+}
+
+/* The element to apply the animation to */
+.animation-location {
+  animation-name: location;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes remote {
+  from {background-image: url(./../../../assets/img/remote_white.png);}
+  to {background-image: url(./../../../assets/img/remote_hover.png);}
+}
+
+/* The element to apply the animation to */
+.animation-remote {
+  animation-name: remote;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 
 @media (max-width:1024px) {
 

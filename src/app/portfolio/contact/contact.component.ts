@@ -1,56 +1,97 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
+
+
 export class ContactComponent {
 
   isChecked: boolean = false;
 
-  namePlaceholder = "Your name";
-  emailPlaceholder = "Your e-mail";
-  messagePlaceholder = "Your message";
+  namePlaceholder = '';
+  emailPlaceholder = '';
+  messagePlaceholder = '';
 
-  ngOnInit() {
-    console.log('Initialwert:', this.isChecked);
+  private langChangeSubscription!: Subscription;
+
+
+  constructor(private translate: TranslateService) { }
+
+  ngOnInit(): void {
+    this.updatePlaceholders();
+
+    this.langChangeSubscription = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.updatePlaceholders();
+    });
+  }
+  
+  updatePlaceholders() {
+    this.translate.get(['YOURNAME', 'YOUREMAIL', 'ENTERMESSAGE']).subscribe(translations => {
+      this.namePlaceholder = translations['YOURNAME'];
+      this.emailPlaceholder = translations['YOUREMAIL'];
+      this.messagePlaceholder = translations['ENTERMESSAGE'];
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.langChangeSubscription) {
+      this.langChangeSubscription.unsubscribe();
+    }
   }
 
   onNameFocus(input: string) {
-    console.log(input);
+    console.log('onNameFocus ', input);
 
-    if (input == "name") {
-      this.namePlaceholder = 'Dein Name';
+    if (input === 'name') {
+      this.translate.get('ENTERNAME').subscribe((translated: string) => {
+        this.namePlaceholder = translated;
+      });
     }
-    if (input == "email") {
-      this.emailPlaceholder = 'Deine E-Mail-Adresse';
+    if (input === 'email') {
+      this.translate.get('ENTEREMAIL').subscribe((translated: string) => {
+        this.emailPlaceholder = translated;
+      });
+    }
+    if (input === 'message') {
+      this.translate.get('ENTERMESSAGE').subscribe((translated: string) => {
+        this.messagePlaceholder = translated;
+      });
     }
   }
 
   onNameBlur(nameInput: NgModel) {
-    // if (!nameInput.valid && nameInput.touched) {
-    //   this.namePlaceholder = 'Bitte geben Sie einen Namen ein';
-    // } else {
-    //   this.namePlaceholder = 'Dein Name';
-    // }
-
-    {
-      this.namePlaceholder = !nameInput.valid && nameInput.touched ? 'Bitte geben Sie einen Namen ein' : 'Your name';
+    if (!nameInput.valid && nameInput.touched) {
+      this.translate.get('ENTERNAME1').subscribe((translated: string) => {
+        this.namePlaceholder = translated;
+      });
     }
   }
 
   onEmailBlur(emailInput: NgModel) {
     if (!emailInput.valid && emailInput.touched) {
-      this.emailPlaceholder = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
-    } else {
-      this.emailPlaceholder = 'Deine E-Mail';
+      this.translate.get('ENTEREMAIL1').subscribe((translated: string) => {
+        this.emailPlaceholder = translated;
+      });
+    }
+  }
+
+  onMessageBlur(messageInput: NgModel) {
+    if (!messageInput.valid && messageInput.touched) {
+      this.translate.get('ENTERMESSAGE').subscribe((translated: string) => {
+        this.messagePlaceholder = translated;
+      });
     }
   }
 

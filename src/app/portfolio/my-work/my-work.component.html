@@ -6,8 +6,6 @@
 
         <app-project-layout class="project-layout"></app-project-layout>
 
-
-
         <div class="ongoing-txt-btn-container">
             <div>
                 <h3 class="num-four">4</h3>
@@ -19,7 +17,7 @@
             </div>
             <div class="need-a-teamplayer-txt-responsive">
                 <h4>
-                    Need a Teamplayer?
+                    {{"NEEDATEAMPLAYER" | translate}}
                 </h4>
                 <h2 class="fc-fffdfd">
                     {{"WHATCOLLEAGUESSAID" | translate}}
@@ -29,9 +27,8 @@
     </div>
 
     <div class="my-work-arrow">
-        <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_right.svg" alt="">
+        <img (click)="scrollTo()" class="cp slide-left" src="../../../assets/img/arrow_right.svg" alt="">
     </div>
-
 
     <div class="title-references-container">
         <div class="my-work-title">
@@ -73,8 +70,16 @@
             </div>
         </div>
     </div>
-    <div  class="my-work-arrow_2">
-        <img (click)="scrollTo()" class="cp" src="../../../assets/img/arrow_right.svg" alt="">
+
+    <!-- dots -->
+    <div style="text-align:center">
+        <span class="dot" (click)="currentSlide(1)"></span>
+        <span class="dot" (click)="currentSlide(2)"></span>
+        <span class="dot" (click)="currentSlide(3)"></span>
+    </div>
+
+    <div class="my-work-arrow_2">
+        <img (click)="scrollTo()" class="cp slide-left" src="../../../assets/img/arrow_right.svg" alt="">
     </div>
 
 </section>

@@ -1,0 +1,65 @@
+section {
+    background: linear-gradient(0.87turn, #2C2B2B, #0B0A0A);
+    padding: 54px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.privacy-policy-container {
+    scrollbar-width: none;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin-left: 16px;
+    margin-right: 16px;
+    color: #FFFDFD;
+    border-radius: 30px;
+    background: linear-gradient(0.25turn, #333D1A, #414C29);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1,
+h2 {
+    color: #FFFDFD;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p,
+ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+a {
+    color: #FFFDFD;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:400px) {
+    .titel {
+        word-break: break-word;
+        hyphens: manual;
+        max-width: 297px;
+    }
+
+}

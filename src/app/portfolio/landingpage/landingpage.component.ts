@@ -40,3 +40,5 @@ export class LandingpageComponent {
     window.open(url, "_blank");
 }
 }
+
+
