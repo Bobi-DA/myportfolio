@@ -200,7 +200,30 @@ p {
     row-gap: 20px;
 }
 
+.references-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    user-select: none;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.references-container.dragging {
+    cursor: grabbing;
+}
+
 .ref-container {
+    flex: 0 1 auto;
+    scroll-snap-align: center;
+    background: #222;
+    // padding: 1rem;
+    // border-radius: 8px;
+    min-width: 80%;
     padding: 0 19px;
     display: flex;
     align-items: center;
@@ -212,8 +235,9 @@ p {
 
     >.ref-txt {
         color: #FFFDFD;
-        font-size: 18px;
+        font-size: 11px;
         font-weight: 400;
+        max-width: 50%;
     }
 
     >.middle-line {
@@ -226,6 +250,7 @@ p {
     >.collegue-container {
         display: flex;
         flex-direction: column;
+        width: 50%;
 
         >.name-collegue {
             color: #B5E93B;
@@ -250,7 +275,7 @@ p {
 
 /* The dots/bullets/indicators */
 .dot {
-    cursor: pointer;
+    // cursor: pointer;
     height: 12px;
     width: 18px;
     margin: 0 8px;
@@ -259,14 +284,18 @@ p {
     display: inline-block;
     transition: background-color, width 0.6s ease;
     border: 1px solid #B5E93B;
+
+    &.active {
+        background-color: #B5E93B;
+    }
 }
 
-.active, .dot:hover {
+.active {
     background-color: #B5E93B;
     width: 27px;
 }
 
-@media (min-width:1024px) {
+@media (min-width:1025px) {
     .ongoing-txt-btn-container {
         >.need-a-teamplayer-txt-responsive {
             display: none;
@@ -276,6 +305,18 @@ p {
 
     .show-more-btn {
         display: none;
+    }
+
+    .dots-container-resp {
+        display: none;
+    }
+
+    .references-container {
+        cursor: auto;
+    }
+
+    .references-container.dragging {
+        cursor: grabbing;
     }
 }
 
@@ -361,6 +402,46 @@ p {
     .my-work-title {
         >h2 {
             margin: auto auto 40px;
+        }
+    }
+}
+
+
+@media (max-width:660px) {
+
+    .ref-container {
+        scroll-snap-align: center;
+        background: #222;
+        min-width: 100%;
+        padding: 19px 19px;
+        display: flex;
+        align-items: center;
+        /* width: auto; */
+        height: auto;
+        border-radius: 30px;
+        border: 1px solid #D3ED97;
+        text-align: center;
+        flex-direction: column-reverse;
+
+        >.ref-txt {
+            color: #FFFDFD;
+            font-size: 11px;
+            font-weight: 400;
+            max-width: 100%;
+            min-height: 60px;
+        }
+
+        >.middle-line {
+            border: 1px solid #D3ED97;
+            height: 0;
+            width: 80%;
+            margin: 19px;
+        }
+
+        >.collegue-container {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
         }
     }
 }

@@ -50,7 +50,7 @@ h2 {
 }
 
 .motivation-txt {
-    width: 272px;
+    max-width: 64%;
     margin: 1rem;
 }
 
@@ -110,7 +110,13 @@ h2 {
 }
 
 @media (max-width:350px) {
-    .skill-txt-container{
+    .skill-txt-container {
         width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .motivation-txt {
+        max-width: none;
     }
 }

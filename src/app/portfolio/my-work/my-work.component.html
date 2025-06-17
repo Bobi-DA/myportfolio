@@ -34,19 +34,19 @@
         <div class="my-work-title">
             <h2>{{"REFERENCE" | translate}}</h2>
         </div>
-        <div class="references-container">
-            <div class="ref-container">
+        <div class="references-container scroll-snap-x" #scrollContainer>
+            <div class="ref-container" #refItem (click)="currentDot(1)">
                 <div class="ref-txt">
                     {{"REFERENCE_1" | translate}}
                 </div>
                 <div class="middle-line"></div>
                 <div class="collegue-container">
-                    <h4 class="name-collegue">1James Rugman</h4>
+                    <h4 class="name-collegue">Toni Kleinf.</h4>
                     <span class="name-project">Project Join</span>
                 </div>
             </div>
 
-            <div class="ref-container">
+            <div class="ref-container" #refItem (click)="currentDot(2)">
                 <div class="ref-txt">
                     {{"REFERENCE_2" | translate}}
                 </div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="ref-container">
+            <div class="ref-container" #refItem (click)="currentDot(3)">
                 <div class="ref-txt">
                     {{"REFERENCE_3" | translate}}
 
@@ -72,10 +72,10 @@
     </div>
 
     <!-- dots -->
-    <div style="text-align:center">
-        <span class="dot" (click)="currentSlide(1)"></span>
-        <span class="dot" (click)="currentSlide(2)"></span>
-        <span class="dot" (click)="currentSlide(3)"></span>
+    <div class="dots-container-resp" style="text-align:center">
+        <span #dot class="dot active" (click)="currentSlide(1)"></span>
+        <span #dot class="dot" (click)="currentSlide(2)"></span>
+        <span #dot class="dot" (click)="currentSlide(3)"></span>
     </div>
 
     <div class="my-work-arrow_2">
