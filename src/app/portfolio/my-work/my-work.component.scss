@@ -27,11 +27,17 @@ section {
     background: linear-gradient(0.25turn, #333D1A, #414C29);
     padding: 0 2em;
     margin-right: 40px;
+    display: flex;
+
 }
 
 .title-project {
     display: flex;
     align-items: center;
+}
+
+.my-work-container {
+    display: flex;
 }
 
 .title-project h1 {
@@ -42,8 +48,7 @@ section {
     -webkit-text-stroke: 1px #a5ff00;
 }
 
-.about-tech-img-container,
-.my-work-bg {
+.about-tech-img-container {
     display: flex;
 }
 
