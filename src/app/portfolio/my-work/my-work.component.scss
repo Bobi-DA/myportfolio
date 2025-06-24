@@ -4,7 +4,6 @@ section {
     display: flex;
     align-items: center;
     padding-left: 12rem;
-    // scroll-snap-align: start;
 }
 
 .my-work-title {
@@ -18,10 +17,6 @@ section {
         writing-mode: sideways-lr;
         margin-right: 25px;
     }
-}
-
-.my-work-container {
-    display: flex;
 }
 
 .my-work-bg {
@@ -47,7 +42,8 @@ section {
     -webkit-text-stroke: 1px #a5ff00;
 }
 
-.about-tech-img-container {
+.about-tech-img-container,
+.my-work-bg {
     display: flex;
 }
 
@@ -84,7 +80,6 @@ button {
     border: 1px solid #B5E93B;
     font-weight: 400;
     font-family: 'Quantico';
-
 }
 
 .btn-container {
@@ -106,7 +101,6 @@ p {
     font-size: 1rem;
     margin-left: 1.4rem;
 }
-
 
 .screenshot-join:hover {
     filter: none;
@@ -157,7 +151,6 @@ p {
     width: 345px;
 
     >div {
-
         display: flex;
         align-items: center;
 
@@ -221,8 +214,6 @@ p {
     flex: 0 1 auto;
     scroll-snap-align: center;
     background: #222;
-    // padding: 1rem;
-    // border-radius: 8px;
     min-width: 80%;
     padding: 0 19px;
     display: flex;
@@ -275,7 +266,6 @@ p {
 
 /* The dots/bullets/indicators */
 .dot {
-    // cursor: pointer;
     height: 12px;
     width: 18px;
     margin: 0 8px;
@@ -416,7 +406,6 @@ p {
         padding: 19px 19px;
         display: flex;
         align-items: center;
-        /* width: auto; */
         height: auto;
         border-radius: 30px;
         border: 1px solid #D3ED97;

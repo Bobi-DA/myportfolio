@@ -51,7 +51,6 @@ h3 {
 
 .why-me-local-icon-container {
     display: flex;
-    // align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
@@ -65,10 +64,6 @@ h3 {
     width: 243px;
     height: 72px;
     margin-bottom: 24px;
-
-    // &:hover {
-    //     background-image: url(../../../assets/img/location_hover.svg);
-    // }
 
     >p:hover {
         color: #B5E93B;
@@ -85,11 +80,6 @@ h3 {
     width: 243px;
     height: 72px;
     margin-bottom: 24px;
-
-
-    // &:hover {
-    //     background-image: url(../../../assets/img/remote_hover.png);
-    // }
 
     >p:hover {
         color: #B5E93B;
@@ -126,13 +116,11 @@ h3 {
     }
 }
 
-/* The element to apply the animation to */
 .animation-location {
     animation-name: location;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-
 
 @keyframes remote {
     from {
@@ -144,7 +132,6 @@ h3 {
     }
 }
 
-/* The element to apply the animation to */
 .animation-remote {
     animation-name: remote;
     animation-duration: 2s;

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -18,7 +18,7 @@ export class WhyMeComponent {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
           } else {
-            entry.target.classList.remove('visible'); // Klasse entfernen, damit Animation erneut ablaufen kann
+            entry.target.classList.remove('visible');
           }
         });
       },

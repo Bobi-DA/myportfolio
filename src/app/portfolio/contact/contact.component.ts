@@ -41,10 +41,9 @@ export class ContactComponent {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log(entry.isIntersecting);
             entry.target.classList.add('visible');
           } else {
-            entry.target.classList.remove('visible'); // Klasse entfernen, damit Animation erneut ablaufen kann
+            entry.target.classList.remove('visible');
           }
         });
       },

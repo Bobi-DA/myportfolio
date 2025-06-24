@@ -12,11 +12,9 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 20px 0px 40px 0px rgba(0, 0, 0, 0.2705882353), inset -20px 0px 32px 0px rgba(0, 0, 0, 0.2705882353);
-
 }
 
 .links-container {
-    // display: flex;
     writing-mode: sideways-lr;
     height: 100%;
     display: flex;
@@ -24,7 +22,6 @@
     width: auto;
 
     >span {
-        // width: 20px;
         color: #4A4A4A;
         font-size: 30px;
 

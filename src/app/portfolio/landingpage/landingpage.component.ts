@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-landingpage',
   standalone: true,
@@ -10,7 +9,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
-
 
 export class LandingpageComponent {
 

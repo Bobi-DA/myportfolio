@@ -26,7 +26,6 @@ export class MenubarComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    // this.closeBurgerMenu(); // danach Menü schließen
   }
 
 
@@ -44,7 +43,6 @@ export class MenubarComponent {
     }
   }
 
-
   closeBurgerMenu() {
     const el = this.linksContainer.nativeElement;
 
@@ -53,7 +51,6 @@ export class MenubarComponent {
     }
   }
 
-  
   switchLanguage(lang: string) {
     this.translate.use(lang);
   }
