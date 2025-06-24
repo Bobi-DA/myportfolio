@@ -18,51 +18,33 @@
                 </div>
                 <br>
             </div>
-            <div class="formular-container">
-
+            <div #animatedSection class="formular-container">
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                    <!-- <label for="name"></label> -->
                     <label for="name"></label>
                     <input #name="ngModel" [(ngModel)]="contactData.name" minlength="3" type="text" name="name"
                         id="name" [placeholder]="namePlaceholder" required (focus)="onNameFocus('name')"
                         (blur)="onNameBlur(name)" [ngClass]="{ 'input-error': !name.valid && name.touched }" />
-
-
-                    <!-- <label for="email"></label> -->
                     <label for="email"></label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" id="email"
                         [placeholder]="emailPlaceholder" required (blur)="onEmailBlur(email)"
                         (focus)="onNameFocus('email')" [ngClass]="{ 'input-error': !email.valid && email.touched }"
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-
-
-                    <!-- <label for="subject"></label> -->
                     <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject"
                         [placeholder]="messagePlaceholder"
                         [ngClass]="{ 'input-error': !message.valid && message.touched }" (blur)="onMessageBlur(message)"
                         (focus)="onNameFocus('message')" required></textarea>
-
-
                     <div class="check-privacy-container">
                         <input class="cp" #checkbox="ngModel" [(ngModel)]="isChecked" type="checkbox" name="agree" id="Checkbox"
                             required>
                         <div [innerHTML]="'PRIVACY_TEXT' | translate:{ url: 'datenschutz' }"></div>
-
                     </div>
                     <div class="send-btn-container">
-                        <!-- <span *ngIf="!email.valid && email.touched && !email.disabled" style="color: #FD2E12;">
-                            {{'ENTEREMAIL' | translate }} </span>
-                        <span *ngIf="!name.valid && name.touched && !name.disabled"
-                            style="color: #FD2E12;">{{'ENTERNAME' | translate }}</span>
-                        <span *ngIf="!message.valid && message.touched && !message.disabled"
-                            style="color: #FD2E12;">{{'ENTERMESSAGE' | translate }}</span> -->
                         <span *ngIf="!checkbox.valid && checkbox.touched && !checkbox.disabled" style="color: #FD2E12; margin-right: 16%; border: 1px solid red; padding: 4px 8px;
                             border-radius: 8px;">{{'CHECKBOX_REQUIRED' | translate }}
                         </span>
-                        <button class="send-btn" [disabled]="contactForm.invalid || !isChecked">Send</button>
+                        <button class="send-btn" [disabled]="contactForm.invalid || !isChecked">{{'SEND_BTN' | translate }}</button>
                     </div>
                 </form>
-
             </div>
         </div>
         <div class="info-container ta-end">
@@ -79,10 +61,6 @@
                     info&#64;boban-jakovljevic.de</a>
             </div>
             <br>
-            <!-- <div class="dflex-acenter-jcend">
-                <img src="../../../assets/img/icon_phone.svg" alt="">
-                <a class="ct-fffdfd fs-18" href="tel:+1234567890">Tel: +1234567890</a>
-            </div> -->
             <div class="my-work-arrow_2">
                 <img (click)="scrollTo()" class="cp slide-right" src="../../../assets/img/arrow_left.svg" alt="">
             </div>

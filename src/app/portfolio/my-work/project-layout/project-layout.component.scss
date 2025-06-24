@@ -1,16 +1,26 @@
 .my-work-grid {
     display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
 }
 
 .my-work-bg {
     width: 57rem;
     background-color: #424C29;
-    // height: 35rem;
     border-radius: 30px;
     background: linear-gradient(0.25turn, #333D1A, #414C29);
     padding: 1em 2em 2.5em;
     margin-right: 40px;
     min-height: 581px;
+
+    opacity: 0;
+    transform: translateY(-150px);
+    transition: opacity 3.6s ease, transform 3s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title-project {
@@ -92,7 +102,6 @@ p {
     margin-left: 1.4rem;
 }
 
-
 .screenshot:hover {
     filter: none;
 }
@@ -131,7 +140,6 @@ p {
         color: #252525;
     }
 }
-
 
 .ongoing-txt {
     color: #FFFDFD;
@@ -232,17 +240,12 @@ p {
     .img-buttons-container-responsive {
         display: none;
     }
-
-    // .show-more-container {
-    //     display: none;
-    // }
 }
-
 
 @media (max-width:1024px) {
     .my-work-grid {
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
     }
 
     .my-work-bg {
@@ -294,8 +297,4 @@ p {
         height: auto;
         width: auto;
     }
-}
-
-@media (max-width:800px) {
-
 }

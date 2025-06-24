@@ -16,11 +16,21 @@ h2 {
     margin: 0 24px;
 }
 
+.skill-txt-container {
+    opacity: 0;
+    transform: translateY(-150px);
+    transition: opacity 3.6s ease, transform 3s ease;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .skill-container {
     margin-bottom: 4%;
     display: flex;
     width: 72%;
-    // height: 64%;
     align-items: flex-start;
 }
 

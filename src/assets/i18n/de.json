@@ -32,8 +32,8 @@
     "------": "",
     "REFERENCE": "Referenzen",
     "REFERENCE_1": "„Boban ist ein ruhiger und ausgeglichener Programmierer, der auch in herausfordernden Situationen den Überblick behält. Mit seiner konzentrierten und überlegten Arbeitsweise löst er Probleme strukturiert und zuverlässig. Seine ruhige Art wirkt sich positiv auf die Teamarbeit aus und sorgt für eine angenehme Zusammenarbeit.“",
-    "REFERENCE_2": "„Michael ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.“",
-    "REFERENCE_3": "„Michael ist ein zuverlässiger und freundlicher Mensch. Er arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.“",
+    "REFERENCE_2": "„Boban überzeugt durch seine strukturierte Arbeitsweise und seine starke Teamorientierung. Auf ihn ist jederzeit Verlass – sowohl fachlich als auch menschlich.“",
+    "REFERENCE_3": "„Boban bringt nicht nur technisches Know-how mit, sondern auch den Willen, sich ständig weiterzuentwickeln. Seine Leidenschaft für Frontend-Entwicklung zeigt sich in jedem Projekt.“",
     "-------": "",
     "PRIVACY_TEXT": "Ich habe die <a href='{{url}}' class='ct-fffdfd pp-text' target='_blank' rel='noopener noreferrer'>Datenschutzerklärung</a> gelesen und bin mit der darin beschriebenen Verarbeitung meiner Daten einverstanden.",
     "LETUSWORKTOGETHER": "💬 Lassen Sie uns ins Gespräch kommen!",
@@ -50,6 +50,7 @@
     "CHECKBOX_REQUIRED":"Bitte Haken setzen",
     "SHOWMEMORE":"Zeig mir mehr",
     "SHOWMELESS":"Zeig mir weniger",
+    "SEND_BTN":"senden",
     "PROJECTS": [
         {
             "id": 1,
@@ -58,7 +59,7 @@
             "technologies": "JavaScript, Firebase, HTML, CSS, Scrum",
             "learned": "Im Projekt habe ich agile Methoden wie Scrum kennengelernt, die eine effektive Teamarbeit fördern. Durch die gemeinsame Nutzung von Git wurden Merge-Konflikte erfolgreich gelöst.",
             "screenshot": "../../../assets/img/screenshot_join.svg",
-            "githubUrl": "https://github.com/",
+            "githubUrl": "https://github.com/Bobi-DA/join",
             "liveUrl": "https://boban-jakovljevic.de/join",
             "expanded": false
         },
@@ -69,7 +70,7 @@
             "technologies": "JavaScript, HTML, CSS",
             "learned": "Ein Browser-Spiel mit objektorientierter Programmierung wurde umgesetzt, das interaktive Elemente und dynamische Spielmechaniken integriert. Dabei habe ich praxisnah gelernt, wie OOP-Konzepte im Spielkontext angewendet und weiterführende Funktionen implementiert werden.",
             "screenshot": "../../../assets/img/screenshot_loco.svg",
-            "githubUrl": "https://github.com/",
+            "githubUrl": "https://github.com/Bobi-DA/EPL",
             "liveUrl": "https://boban-jakovljevic.de/elPolloLoco",
             "expanded": false
         },
@@ -80,7 +81,7 @@
             "technologies": "JavaScript, REST-API, CSS, HTML",
             "learned": "Im Pokedex-Projekt habe ich eine API integriert, um relevante Pokémon-Daten abzurufen und diese in ansprechenden Bildern darzustellen. Dabei konnte ich den Umgang mit API-Informationen und deren visuelle Aufbereitung praxisnah erlernen.",
             "screenshot": "../../../assets/img/screenshot_pokedex.png",
-            "githubUrl": "https://github.com/…",
+            "githubUrl": "https://github.com/Bobi-DA/Pokedex",
             "liveUrl": "https://boban-jakovljevic.de/pokedex",
             "expanded": false
         }

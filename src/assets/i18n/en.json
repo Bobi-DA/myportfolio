@@ -31,9 +31,9 @@
     "WHATCOLLEAGUESSAID": "Here what my colleagues said about me",
     "------": "",
     "REFERENCE": "Reference",
-    "REFERENCE_1": "„Michael is a reliable and friendly person. He works in a structured way and writes clear code. I recommend him as a colleague.“",
-    "REFERENCE_2": "Patrik is a reliable and friendly person. He works in a structured way and writes clear code. I recommend him as a colleague.“",
-    "REFERENCE_3": "Bob is a reliable and friendly person. He works in a structured way and writes clear code. I recommend him as a colleague.“",
+    "REFERENCE_1": "„Boban is a calm and even-tempered programmer who keeps an overview even in challenging situations. With his concentrated and thoughtful way of working, he solves problems in a structured and reliable manner. His calm manner has a positive effect on teamwork and ensures pleasant collaboration.“",
+    "REFERENCE_2": "„Boban impresses with his structured way of working and his strong team orientation. You can always rely on him - both professionally and personally.“",
+    "REFERENCE_3": "„Boban not only has technical know-how, but also the will to constantly develop himself further. His passion for front-end development is evident in every project.“",
     "-------": "",
     "PRIVACY_TEXT": "I've read the <a href='{{url}}' class='ct-fffdfd pp-text' target='_blank' rel='noopener noreferrer'>privacy policy</a> and agree to the processing of my data as described.",
     "LETUSWORKTOGETHER": "Let us work together.",
@@ -50,6 +50,7 @@
     "CHECKBOX_REQUIRED":"Please check the box",
     "SHOWMEMORE": "Show me more",
     "SHOWMELESS": "show me less",
+    "SEND_BTN":"send",
     "PROJECTS": [
         {
             "id": 1,

@@ -1,87 +1,31 @@
 <div *ngIf="screenWidth > 1024" class="my-work-grid">
-  <div class="translate-container" *ngFor="let p of ( 'PROJECTS' | translate ) as projects">
-    <div class="my-work-bg">
-      <div class="title-project">
-        <h1>{{ p.id }}</h1>
-        <h2 class="h2-my-work">{{ p.title }}</h2>
-      </div>
-      <div class="about-tech-img-container">
-        <div>
-          <ul class="ul-my-work">
-            <li>
-              <h4>{{"ABOUTPROJECT" | translate }} </h4>
-            </li>
-            <p>{{ p.description }}</p>
-            <li>
-              <h4>{{"TECHNOLOGIES" | translate }}</h4>
-            </li>
-            <p>{{ p.technologies }}</p>
-          </ul>
+  <ng-container *ngFor="let p of projects">
+    <div class="translate-container">
+      <div #animatedSection class="my-work-bg">
+        <div class="title-project">
+          <h1>{{ p.id }}</h1>
+          <h2 class="h2-my-work">{{ p.title }}</h2>
         </div>
-        <div class="img-buttons-container">
-          <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
-          <div class="btn-container">
-            <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
-              Test</button>
+        <div class="about-tech-img-container">
+          <div>
+            <ul class="ul-my-work">
+              <li>
+                <h4>{{"ABOUTPROJECT" | translate }} </h4>
+              </li>
+              <p>{{ p.description }}</p>
+              <li>
+                <h4>{{"TECHNOLOGIES" | translate }}</h4>
+              </li>
+              <p>{{ p.technologies }}</p>
+            </ul>
           </div>
-        </div>
-      </div>
-      <div>
-        <ul class="ul-my-work">
-          <li>
-            <h4>{{"WHATLEARNED" | translate }}</h4>
-          </li>
-          <p>{{ p.learned }}</p>
-        </ul>
-      </div>
-      <div class="img-buttons-container-responsive">
-        <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
-        <div class="btn-container">
-          <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
-          <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live Test</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div *ngIf="screenWidth <= 1024" class="my-work-grid">
-  <div *ngFor="let p of ( 'PROJECTS' | translate ) as projects" class="my-work-bg">
-    <!-- Titel & Bild bleiben gleich... -->
-
-    <div class="about-tech-img-container">
-      <div *ngIf="!p.expanded">
-        <!-- Nur kurze Infos anzeigen -->
-        <ul class="ul-my-work">
-          <li>
-            <h4>{{"ABOUTPROJECT" | translate }}</h4>
-          </li>
-          <p>{{ p.description }}</p>
-        </ul>
-      </div>
-
-      <div *ngIf="p.expanded">
-        <!-- Ganzen Inhalt anzeigen -->
-        <div>
-          <ul class="ul-my-work">
-            <li>
-              <h4>{{"ABOUTPROJECT" | translate }}</h4>
-            </li>
-            <p>{{ p.description }}</p>
-            <li>
-              <h4>{{"TECHNOLOGIES" | translate }} </h4>
-            </li>
-            <p>{{ p.technologies }}</p>
-          </ul>
-        </div>
-        <div class="img-buttons-container">
-          <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
-          <div class="btn-container">
-            <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
-              Test</button>
+          <div class="img-buttons-container">
+            <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
+            <div class="btn-container">
+              <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+              <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
+                Test</button>
+            </div>
           </div>
         </div>
         <div>
@@ -96,26 +40,81 @@
           <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
           <div class="btn-container">
             <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
-            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
-              Test</button>
+            <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live Test</button>
           </div>
         </div>
       </div>
     </div>
+  </ng-container>
+</div>
 
-    <!-- Show More / Show Less Button -->
-    <!-- <div class="show-more-btn">
-      <a class="cp" (click)="toggleExpanded(p)">
-        {{ p.expanded ? 'Show Less' : 'Show More' }}
-      </a>
-    </div> -->
+<div *ngIf="screenWidth <= 1024" class="my-work-grid">
+  <ng-container *ngFor="let p of projects">
+    <div class="my-work-bg" #animatedSection>
+      <!-- Titel & Bild bleiben gleich... -->
 
-    <div *ngIf="screenWidth <= 1024" class="show-more-container">
-      <a class="cp" (click)="toggleExpanded(p)">
-        <img class="show-me-img" *ngIf="p.expanded" src="../../../../assets/img/show_less.svg" alt='{{"SHOWMELESS" | translate }}'>
-        <img class="show-me-img" *ngIf="!p.expanded" src="../../../../assets/img/show_more.svg" alt='{{"SHOWMEMORE" | translate }}'>
-      </a>
+      <div class="about-tech-img-container">
+        <div *ngIf="!p.expanded">
+          <!-- Nur kurze Infos anzeigen -->
+          <ul class="ul-my-work">
+            <li>
+              <h4>{{"ABOUTPROJECT" | translate }}</h4>
+            </li>
+            <p>{{ p.description }}</p>
+          </ul>
+        </div>
+
+        <div *ngIf="p.expanded">
+          <!-- Ganzen Inhalt anzeigen -->
+          <div>
+            <ul class="ul-my-work">
+              <li>
+                <h4>{{"ABOUTPROJECT" | translate }}</h4>
+              </li>
+              <p>{{ p.description }}</p>
+              <li>
+                <h4>{{"TECHNOLOGIES" | translate }} </h4>
+              </li>
+              <p>{{ p.technologies }}</p>
+            </ul>
+          </div>
+          <div class="img-buttons-container">
+            <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
+            <div class="btn-container">
+              <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+              <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
+                Test</button>
+            </div>
+          </div>
+          <div>
+            <ul class="ul-my-work">
+              <li>
+                <h4>{{"WHATLEARNED" | translate }}</h4>
+              </li>
+              <p>{{ p.learned }}</p>
+            </ul>
+          </div>
+          <div class="img-buttons-container-responsive">
+            <img class="screenshot cp" [src]="p.screenshot" alt="{{ p.title }} screenshot">
+            <div class="btn-container">
+              <button class="btn-github" (click)="openLinkInNewTab(p.githubUrl)">GitHub</button>
+              <button *ngIf="p.liveUrl" class="btn-live-test" (click)="openLinkInNewTab(p.liveUrl)">Live
+                Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div *ngIf="screenWidth <= 1024" class="show-more-container">
+        <a class="cp" (click)="toggleExpanded(p)">
+          <img class="show-me-img" *ngIf="p.expanded" src="../../../../assets/img/show_less.svg"
+            alt='{{"SHOWMELESS" | translate }}'>
+          <img class="show-me-img" *ngIf="!p.expanded" src="../../../../assets/img/show_more.svg"
+            alt='{{"SHOWMEMORE" | translate }}'>
+        </a>
+      </div>
+
     </div>
-
-  </div>
+  </ng-container>
 </div>

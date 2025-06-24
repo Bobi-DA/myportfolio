@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LangChangeEvent, TranslateModule } from '@ngx-translate/core';
@@ -15,8 +15,8 @@ import { Subscription } from 'rxjs';
   styleUrl: './contact.component.scss',
 })
 
-
 export class ContactComponent {
+  @ViewChildren('animatedSection', { read: ElementRef }) sections!: QueryList<ElementRef>;
 
   isChecked: boolean = false;
 
@@ -25,7 +25,6 @@ export class ContactComponent {
   messagePlaceholder = '';
 
   private langChangeSubscription!: Subscription;
-
 
   constructor(private translate: TranslateService) { }
 
@@ -36,7 +35,29 @@ export class ContactComponent {
       this.updatePlaceholders();
     });
   }
-  
+
+  ngAfterViewInit() {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log(entry.isIntersecting);
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible'); // Klasse entfernen, damit Animation erneut ablaufen kann
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    this.sections.forEach(section => {
+      observer.observe(section.nativeElement);
+    });
+  }
+
   updatePlaceholders() {
     this.translate.get(['YOURNAME', 'YOUREMAIL', 'ENTERMESSAGE']).subscribe(translations => {
       this.namePlaceholder = translations['YOURNAME'];
