@@ -5,12 +5,13 @@ import { CommonModule } from '@angular/common';
 import { LangChangeEvent, TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { FooterComponent } from "../footer/footer.component";
 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule],
+  imports: [FormsModule, CommonModule, TranslateModule, FooterComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -19,10 +20,12 @@ export class ContactComponent {
   @ViewChildren('animatedSection', { read: ElementRef }) sections!: QueryList<ElementRef>;
 
   isChecked: boolean = false;
+  successMessage: string = '';
 
   namePlaceholder = '';
   emailPlaceholder = '';
   messagePlaceholder = '';
+  emailErrorMessage: string = '';
 
   private langChangeSubscription!: Subscription;
 
@@ -42,13 +45,11 @@ export class ContactComponent {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-          } else {
-            entry.target.classList.remove('visible');
           }
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.2,
       }
     );
 
@@ -101,9 +102,11 @@ export class ContactComponent {
 
   onEmailBlur(emailInput: NgModel) {
     if (!emailInput.valid && emailInput.touched) {
-      this.translate.get('ENTEREMAIL1').subscribe((translated: string) => {
-        this.emailPlaceholder = translated;
+      this.translate.get('ENTEREMAIL').subscribe((translated: string) => {
+        this.emailErrorMessage = translated;
       });
+    } else {
+      this.emailErrorMessage = '';
     }
   }
 
@@ -147,7 +150,7 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.successMessage = this.translate.instant('FORM_SUCCESS');
             ngForm.resetForm();
           },
           error: (error) => {

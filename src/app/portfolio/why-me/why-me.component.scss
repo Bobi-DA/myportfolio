@@ -10,6 +10,7 @@ section {
 .why-me-container {
     display: flex;
     width: 56%;
+    max-width: 1920px;
 }
 
 button {
@@ -92,6 +93,7 @@ h3 {
     width: 90%;
     flex-direction: row-reverse;
     align-items: flex-end;
+    max-width: 1920px;
 }
 
 .why-me-txt-iam-local-container {

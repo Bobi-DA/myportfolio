@@ -36,6 +36,7 @@
     "REFERENCE_3": "„Boban bringt nicht nur technisches Know-how mit, sondern auch den Willen, sich ständig weiterzuentwickeln. Seine Leidenschaft für Frontend-Entwicklung zeigt sich in jedem Projekt.“",
     "-------": "",
     "PRIVACY_TEXT": "Ich habe die <a href='{{url}}' class='ct-fffdfd pp-text' target='_blank' rel='noopener noreferrer'>Datenschutzerklärung</a> gelesen und bin mit der darin beschriebenen Verarbeitung meiner Daten einverstanden.",
+    "PRIVACY_TITLE": "Datenschutz&shy;erklärung",
     "LETUSWORKTOGETHER": "💬 Lassen Sie uns ins Gespräch kommen!",
     "ENCOURAGETEXT": "Ich freue mich über jede Gelegenheit, mich neuen Herausforderungen zu stellen und meine Fähigkeiten weiter auszubauen. Besonders interessieren mich Aufgaben im Frontend-Bereich, bei denen Benutzerfreundlichkeit, Design und Technik zusammenspielen – etwa in der Entwicklung moderner, responsiver Webanwendungen mit Angular oder ähnlichen Frameworks. Ich bin überzeugt, mit meinem technischen Know-how, meiner Lernbereitschaft und meiner Begeisterung für sauberen Code einen wertvollen Beitrag in einem engagierten Team leisten zu können. Mein Ziel ist es, mich stetig weiterzuentwickeln und gemeinsam mit anderen innovative Lösungen zu gestalten.</br> 📩 Kontaktieren Sie mich gerne – ich freue mich auf spannende Gespräche und Projekte!",
     "LEGALNOTICE": "Impressum",
@@ -45,12 +46,13 @@
     "ENTERNAME":"Bitte geben Sie mindestens 3 Buchstaben ein",
     "YOUREMAIL":"Deine E-Mail-Adresse",
     "ENTEREMAIL1":"Deine E-Mail-Adresse eingeben",
-    "ENTEREMAIL":"Beispiel max@mustermann.de",
+    "ENTEREMAIL":"Bspl. max@mustermann.de",
     "ENTERMESSAGE":"Bitte geben Sie eine Nachricht ein",
     "CHECKBOX_REQUIRED":"Bitte Haken setzen",
     "SHOWMEMORE":"Zeig mir mehr",
     "SHOWMELESS":"Zeig mir weniger",
     "SEND_BTN":"senden",
+    "FORM_SUCCESS": "Nachricht wurde erfolgreich gesendet!",
     "PROJECTS": [
         {
             "id": 1,

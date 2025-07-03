@@ -24,7 +24,7 @@
                     <input #name="ngModel" [(ngModel)]="contactData.name" minlength="3" type="text" name="name"
                         id="name" [placeholder]="namePlaceholder" required (focus)="onNameFocus('name')"
                         (blur)="onNameBlur(name)" [ngClass]="{ 'input-error': !name.valid && name.touched }" />
-                    <label for="email"></label>
+                    <label class="label-email" for="email"></label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" id="email"
                         [placeholder]="emailPlaceholder" required (blur)="onEmailBlur(email)"
                         (focus)="onNameFocus('email')" [ngClass]="{ 'input-error': !email.valid && email.touched }"
@@ -39,11 +39,13 @@
                         <div [innerHTML]="'PRIVACY_TEXT' | translate:{ url: 'datenschutz' }"></div>
                     </div>
                     <div class="send-btn-container">
+                        <span class="error-message" *ngIf="emailErrorMessage">{{ 'ENTEREMAIL' | translate }}</span>
                         <span *ngIf="!checkbox.valid && checkbox.touched && !checkbox.disabled" style="color: #FD2E12; margin-right: 16%; border: 1px solid red; padding: 4px 8px;
                             border-radius: 8px;">{{'CHECKBOX_REQUIRED' | translate }}
                         </span>
                         <button class="send-btn" [disabled]="contactForm.invalid || !isChecked">{{'SEND_BTN' | translate }}</button>
                     </div>
+                    <span *ngIf="successMessage" class="form-success">{{ 'FORM_SUCCESS' | translate }}</span>
                 </form>
             </div>
         </div>
@@ -64,12 +66,7 @@
             <div class="my-work-arrow_2">
                 <img (click)="scrollTo()" class="cp slide-right" src="../../../assets/img/arrow_left.svg" alt="">
             </div>
-            <footer class="legal-policy-copy-container">
-                <a class="link" routerLink="/impressum" href="/impressum" target='_blank'>{{"LEGALNOTICE"|translate}}</a>
-                <br>
-                <a class="link" routerLink="/datenschutz" href="/datenschutz" target='_blank'>{{"PRIVACYPOLICY"|translate}}</a>
-                <p class="copyright">&#169; Boban Jakovljevic 2025</p>
-            </footer>
+            <app-footer></app-footer>
         </div>
     </div>
     <div class="arrow-responsive">

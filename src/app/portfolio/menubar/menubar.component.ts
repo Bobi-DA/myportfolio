@@ -10,6 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
+  @ViewChild('linksContainer') linksContainer!: ElementRef;
 
   widthWin = window.innerWidth;
 
@@ -29,7 +30,6 @@ export class MenubarComponent {
   }
 
 
-  @ViewChild('linksContainer') linksContainer!: ElementRef;
 
   openBurgerMenu() {
     const el = this.linksContainer.nativeElement;

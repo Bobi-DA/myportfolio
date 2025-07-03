@@ -1,16 +1,16 @@
 <section class="menubar-section">
     <a class="cp" (click)="scrollTo('landingpage')"><img src="./../../../assets/img/logo.png" alt="logo"></a>
-    <div #linksContainer class="links-container">
+    <nav #linksContainer class="links-container">
         <div class="lang-resp-container fs-18 ml-40 fc-fffdfd">
             <span (click)="switchLanguage('de'); closeBurgerMenu()" class="cp txt-hover">DE</span>
             <span> | </span>
             <span (click)="switchLanguage('en'); closeBurgerMenu()" class="cp txt-hover">EN</span>
         </div>
-        <span (click)="scrollTo('contact'); closeBurgerMenu()" class="cp">{{ 'MENUCONTACT' | translate }}</span>
-        <span (click)="scrollTo('myWork'); closeBurgerMenu()" class="cp">{{ 'MENUPROJECT' | translate }}</span>
-        <span (click)="scrollTo('skills'); closeBurgerMenu()" class="cp">{{ 'MENUSKILLS' | translate }}</span>
-        <span (click)="scrollTo('whyMe'); closeBurgerMenu()" class="cp">{{ 'MENUWHYME' | translate }}</span>
+        <a (click)="scrollTo('contact'); closeBurgerMenu()" class="cp">{{ 'MENUCONTACT' | translate }}</a>
+        <a (click)="scrollTo('myWork'); closeBurgerMenu()" class="cp">{{ 'MENUPROJECT' | translate }}</a>
+        <a (click)="scrollTo('skills'); closeBurgerMenu()" class="cp">{{ 'MENUSKILLS' | translate }}</a>
+        <a (click)="scrollTo('whyMe'); closeBurgerMenu()" class="cp">{{ 'MENUWHYME' | translate }}</a>
 
-    </div>
+    </nav>
     <div (click)="openBurgerMenu()" class="burger-menu-reponsive cp"></div>
 </section>

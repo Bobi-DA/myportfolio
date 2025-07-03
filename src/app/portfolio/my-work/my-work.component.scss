@@ -220,20 +220,20 @@ p {
     scroll-snap-align: center;
     background: #222;
     min-width: 80%;
-    padding: 0 19px;
+    padding: 19px;
     display: flex;
     align-items: center;
-    width: 520px;
-    height: 11.5rem;
+    width: 720px;
+    min-height: 210px;
     border-radius: 30px;
     border: 1px solid #D3ED97;
     text-align: center;
 
     >.ref-txt {
         color: #FFFDFD;
-        font-size: 11px;
+        font-size: 16px;
         font-weight: 400;
-        max-width: 50%;
+        max-width: 64%;
     }
 
     >.middle-line {
@@ -246,7 +246,7 @@ p {
     >.collegue-container {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        margin: auto;
 
         >.name-collegue {
             color: #B5E93B;
@@ -419,7 +419,7 @@ p {
 
         >.ref-txt {
             color: #FFFDFD;
-            font-size: 11px;
+            font-size: 16px;
             font-weight: 400;
             max-width: 100%;
             min-height: 60px;

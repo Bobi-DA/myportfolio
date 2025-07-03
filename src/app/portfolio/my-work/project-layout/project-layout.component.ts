@@ -65,8 +65,6 @@ export class ProjectLayoutComponent implements AfterViewInit, OnInit {
           const el = entry.target as HTMLElement;
           if (entry.isIntersecting) {
             el.classList.add('visible');
-          } else {
-            el.classList.remove('visible');
           }
         });
       },

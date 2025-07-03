@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './landingpage.component.scss'
 })
 
-export class LandingpageComponent {
+export class LandingpageComponent implements OnInit {
 
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'de']);
@@ -18,6 +18,16 @@ export class LandingpageComponent {
 
     const browserLang = this.translate.getBrowserLang();
     this.translate.use(browserLang && ['de', 'en'].includes(browserLang) ? browserLang : 'de');
+  }
+
+  ngOnInit(): void {
+    const language = localStorage.getItem('language');
+    if (language) {
+      this.translate.use(language);
+    } else {
+      const browserLang = this.translate.getBrowserLang();
+      this.translate.use(browserLang?.match(/de|en/) ? browserLang : 'de');
+    }
   }
 
   scrollTo() {
@@ -32,11 +42,12 @@ export class LandingpageComponent {
 
   switchLanguage(lang: string) {
     this.translate.use(lang);
+    localStorage.setItem("language", lang);
   }
 
-  goToLink(url: string){
-    window.open(url, "_blank");
-}
+  // goToLink(url: string) {
+  //   window.open(url, "_blank");
+  // }
 }
 
 
