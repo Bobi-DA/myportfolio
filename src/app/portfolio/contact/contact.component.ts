@@ -6,7 +6,7 @@ import { LangChangeEvent, TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 import { FooterComponent } from "../footer/footer.component";
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',

@@ -22,6 +22,7 @@ export class LandingpageComponent implements OnInit {
 
   ngOnInit(): void {
     const language = localStorage.getItem('language');
+    
     if (language) {
       this.translate.use(language);
     } else {
