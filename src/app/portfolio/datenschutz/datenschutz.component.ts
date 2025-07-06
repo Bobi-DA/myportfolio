@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MenubarComponent } from "../menubar/menubar.component";
 
 @Component({
   selector: 'app-datenschutz',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, MenubarComponent],
   templateUrl: './datenschutz.component.html',
   styleUrl: './datenschutz.component.scss'
 })

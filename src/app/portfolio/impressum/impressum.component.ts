@@ -6,7 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, MenubarComponent],
   templateUrl: './impressum.component.html',
   styleUrl: './impressum.component.scss'
 })

@@ -36,7 +36,7 @@
                     <div class="check-privacy-container">
                         <input class="cp" #checkbox="ngModel" [(ngModel)]="isChecked" type="checkbox" name="agree" id="Checkbox"
                             required>
-                        <div [innerHTML]="'PRIVACY_TEXT' | translate:{ url: 'datenschutz' }"></div>
+                        <div routerLink="/datenschutz" [innerHTML]="'PRIVACY_TEXT' | translate:{ url: '/datenschutz' }"></div>
                     </div>
                     <div class="send-btn-container">
                         <span class="error-message" *ngIf="emailErrorMessage">{{ 'ENTEREMAIL' | translate }}</span>
@@ -82,8 +82,8 @@
             <img src="../../../assets/img/logo_resp.png" alt="">
             <p class="copyright">&#169; Boban Jakovljevic 2025</p>
             <div class="footer-legal-privacy-responsive">
-                <a class="link-resp" routerLink='/impressum' target='_blank'>{{"LEGALNOTICE"|translate}}</a>
-                <a class="link-resp" routerLink='/datenschutz' target='_blank'>{{"PRIVACYPOLICY"|translate}}</a>
+                <a class="link-resp cp" routerLink='/impressum'>{{"LEGALNOTICE"|translate}}</a>
+                <a class="link-resp cp" routerLink='/datenschutz'>{{"PRIVACYPOLICY"|translate}}</a>
             </div>
         </div>
     </div>

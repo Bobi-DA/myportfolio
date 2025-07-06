@@ -35,7 +35,7 @@
     "REFERENCE_2": "„Boban impresses with his structured way of working and his strong team orientation. You can always rely on him - both professionally and personally.“",
     "REFERENCE_3": "„Boban not only has technical know-how, but also the will to constantly develop himself further. His passion for front-end development is evident in every project.“",
     "-------": "",
-    "PRIVACY_TEXT": "I've read the <a href='{{url}}' class='ct-fffdfd pp-text' target='_blank' rel='noopener noreferrer'>privacy policy</a> and agree to the processing of my data as described.",
+    "PRIVACY_TEXT": "I've read the <a href='{{url}}' class='ct-fffdfd pp-text' rel='noopener noreferrer'>privacy policy</a> and agree to the processing of my data as described.",
     "PRIVACY_TITLE": "Privacy&shy;Policy",
     "LETUSWORKTOGETHER": "Let us work together.",
     "ENCOURAGETEXT": "Encourage people to contact you and describe what role you are interested in. Express confidence in your ability to make a meaningful contribution to a team through your expertise and enthusiasm for improving your skills.",

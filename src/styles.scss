@@ -16,7 +16,7 @@ body {
     font-family: 'Quantico';
 
     @media (max-width:1024px) {
-        overflow-y: visible;
+        overflow-y: hidden;
         overflow-x: hidden;
     }
 }

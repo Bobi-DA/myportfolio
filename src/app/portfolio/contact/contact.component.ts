@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, TranslateModule, FooterComponent],
+  imports: [FormsModule, CommonModule, TranslateModule, FooterComponent, RouterLink],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

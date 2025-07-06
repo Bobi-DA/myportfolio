@@ -1,6 +1,7 @@
 import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menubar',
@@ -14,7 +15,7 @@ export class MenubarComponent {
 
   widthWin = window.innerWidth;
 
-  constructor(@Inject(DOCUMENT) private document: Document, public translate: TranslateService) {
+  constructor(@Inject(DOCUMENT) private document: Document, public translate: TranslateService, private router: Router) {
     translate.addLangs(['en', 'de']);
     translate.setDefaultLang('de');
 
@@ -22,14 +23,30 @@ export class MenubarComponent {
     this.translate.use(browserLang && ['de', 'en'].includes(browserLang) ? browserLang : 'de');
   }
 
-  scrollTo(sectionId: string) {
-    const element = this.document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  // scrollTo(sectionId: string) {
+  //   const element = this.document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }
+
+  scrollToOrNavigate(sectionId: string) {
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100); 
+      });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
-
-
 
   openBurgerMenu() {
     const el = this.linksContainer.nativeElement;
