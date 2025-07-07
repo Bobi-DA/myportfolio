@@ -85,6 +85,9 @@ form {
         transform: translateY(0) scale(1);
     }
 }
+  input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+  }
 
 input:required {
     height: 60px;
@@ -111,6 +114,7 @@ textarea:focus-visible {
 }
 
 textarea:required {
+    font-family: 'Quantico';
     height: 195px;
     border: 1px solid #B5E93B;
     background-color: transparent;

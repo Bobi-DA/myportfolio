@@ -73,8 +73,6 @@ export class ContactComponent {
   }
 
   onNameFocus(input: string) {
-    console.log('onNameFocus ', input);
-
     if (input === 'name') {
       this.translate.get('ENTERNAME').subscribe((translated: string) => {
         this.namePlaceholder = translated;

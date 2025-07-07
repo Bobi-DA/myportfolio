@@ -3,7 +3,7 @@ section {
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
 }
 
@@ -27,7 +27,7 @@ h2 {
 }
 
 .skill-container {
-    margin-bottom: 4%;
+    margin-top: 8%;
     display: flex;
     width: 72%;
     align-items: flex-start;
@@ -55,7 +55,7 @@ h2 {
 
 .skill-arrow {
     position: absolute;
-    right: 64px;
+    right: 10%;
     height: 72%;
 }
 
@@ -65,7 +65,9 @@ h2 {
 }
 
 @media (min-width:1024px) {
-    .btn-letstalk-container {
+
+    .btn-letstalk-container,
+    .resp-motiv-container {
         display: none;
     }
 }
@@ -77,7 +79,18 @@ h2 {
         scroll-margin-top: 12vh;
     }
 
-    .skill-arrow {
+    .skill-icon-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        justify-items: center;
+    }
+
+    .motivation-txt {
+        margin: 0;
+    }
+
+    .skill-arrow,
+    .web-motiv-container {
         display: none;
     }
 

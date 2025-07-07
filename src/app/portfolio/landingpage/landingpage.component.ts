@@ -32,9 +32,7 @@ export class LandingpageComponent implements OnInit {
   }
 
   scrollTo() {
-    console.log("click");
     const element = document.getElementById('whyMe');
-    console.log(element);
 
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
